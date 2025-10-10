@@ -1,73 +1,278 @@
-# Welcome to your Lovable project
+# Steve Chranowski — Personal Hub & Blog
 
-## Project info
+A calm, minimalist personal website inspired by [wabi.ai](https://wabi.ai). Built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476
+**Live URL**: https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- ✅ **Hero section** with confident CTAs
+- ✅ **Micro-updates stream** (reverse-chron, Twitter/tumblelog style)
+- ✅ **Blog system** with featured posts, tags, reading time, clean reading layout
+- ✅ **Projects grid** (portfolio showcase)
+- ✅ **Events calendar** (upcoming/past)
+- ✅ **Contact form** (webhook-ready)
+- ✅ **SEO metadata** (Open Graph, Twitter cards)
+- ✅ **Mobile-first responsive design**
+- ✅ **Sample content** (6 posts, 8 micro-updates, 3 projects, 3 events)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Content Management
 
-**Use your preferred IDE**
+All content is editable in **`src/data/siteData.ts`**. This acts as a simple CMS.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Site Configuration
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Edit basic site info:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```typescript
+export const siteConfig = {
+  site_name: "Steve Chranowski",
+  hero_headline: "Doing things. Shamelessly sharing them.",
+  about_text: "Your bio here...",
+  social_links: [...],
+  // ... more fields
+};
 ```
 
-**Edit a file directly in GitHub**
+### Adding Blog Posts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```typescript
+export const blogPosts: BlogPost[] = [
+  {
+    id: "post-7",
+    title: "Your Post Title",
+    slug: "your-post-slug",
+    date: "2025-10-15T10:00:00Z",
+    tags: ["tag1", "tag2"],
+    category: "Essays",
+    excerpt: "Short summary...",
+    body_html: `<p>Your content in HTML...</p>`,
+    reading_time: 5,
+    published: true,
+    featured: false
+  },
+  // ... existing posts
+];
+```
 
-**Use GitHub Codespaces**
+### Adding Micro-Updates
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```typescript
+export const microUpdates: MicroUpdate[] = [
+  {
+    id: "mu-9",
+    text: "Your short update here...",
+    date: "2025-10-15T14:30:00Z",
+    tags: ["tag"],
+    published: true
+  },
+  // ... existing updates
+];
+```
 
-## What technologies are used for this project?
+### Adding Projects
 
-This project is built with:
+```typescript
+export const projects: Project[] = [
+  {
+    id: "proj-4",
+    title: "New Project",
+    slug: "new-project",
+    excerpt: "Short description...",
+    link: "https://project-url.com",
+    featured: true,
+    tags: ["tag1", "tag2"]
+  },
+  // ... existing projects
+];
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Adding Events
 
-## How can I deploy this project?
+```typescript
+export const events: Event[] = [
+  {
+    id: "evt-4",
+    date: "2025-12-01T19:00:00Z",
+    title: "Event Title",
+    location: "San Diego",
+    link: "https://event-link.com",
+    past: false
+  },
+  // ... existing events
+];
+```
 
-Simply open [Lovable](https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## Design System
 
-Yes, you can!
+Defined in `src/index.css` and `tailwind.config.ts`:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Colors:**
+- Background: `#FBFBFB` (off-white)
+- Foreground: `#0F1720` (charcoal)
+- Accent: `#0EA5A4` (teal)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Typography:**
+- UI: Inter Variable
+- Longform reading: Georgia serif
+
+**Layout:**
+- Max content width: 1100px
+- Reading width: 780px
+- Mobile-first breakpoints: 420, 768, 1024, 1440px
+
+---
+
+## SEO & Metadata
+
+Edit meta tags in `index.html`:
+
+```html
+<title>Steve Chranowski — Doing things. Shamelessly sharing them.</title>
+<meta name="description" content="..." />
+<meta property="og:image" content="YOUR_IMAGE_URL" />
+```
+
+Each blog post automatically includes:
+- Reading time calculation
+- Social share functionality
+- Semantic HTML structure
+
+---
+
+## Webhooks & Integrations
+
+### Contact Form
+
+Set webhook URL in `siteData.ts`:
+
+```typescript
+contact_form_webhook_url: "https://your-webhook-url.com"
+```
+
+### Analytics
+
+Add Google Analytics ID:
+
+```typescript
+ga_measurement_id: "G-XXXXXXXXXX"
+```
+
+---
+
+## Publishing Workflow
+
+1. **Edit content** in `src/data/siteData.ts`
+2. **Preview changes** in Lovable (auto-updates)
+3. **Deploy** by clicking "Publish" in Lovable UI
+
+---
+
+## Exporting & Hosting
+
+This project can be deployed to:
+- Vercel (recommended)
+- Netlify
+- GitHub Pages
+- Any static host
+
+Build command: `npm run build`  
+Output directory: `dist/`
+
+---
+
+## File Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── MicroUpdates.tsx
+│   ├── BlogIndex.tsx
+│   ├── Projects.tsx
+│   ├── Events.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+├── data/
+│   └── siteData.ts     # ← EDIT THIS for content
+├── pages/
+│   ├── Index.tsx       # Main hub page
+│   ├── BlogPost.tsx    # Individual post template
+│   └── NotFound.tsx
+├── index.css           # Design system
+└── App.tsx             # Routes
+```
+
+---
+
+## Customization Tips
+
+### Change Colors
+
+Edit `src/index.css`:
+
+```css
+:root {
+  --background: 0 0% 98.4%;
+  --foreground: 210 65% 8%;
+  --accent: 179 93% 34%; /* Change this */
+}
+```
+
+### Add Drop Cap to Posts
+
+Add `drop-cap` class to first paragraph:
+
+```html
+<p class="drop-cap">First paragraph with fancy drop cap...</p>
+```
+
+### Swap Hero Image
+
+Replace the placeholder div in `src/components/Hero.tsx` with:
+
+```tsx
+<img 
+  src="/path/to/your-image.jpg" 
+  alt="Steve Chranowski"
+  className="w-full h-full object-cover"
+/>
+```
+
+---
+
+## Next Steps
+
+- Replace hero image placeholder with your photo
+- Add featured images to blog posts
+- Customize color scheme
+- Connect contact form webhook
+- Add analytics tracking
+- Export to static host
+
+---
+
+## Tech Stack
+
+- **React 18** + TypeScript
+- **Vite** (build tool)
+- **Tailwind CSS** (styling)
+- **shadcn/ui** (components)
+- **Lucide React** (icons)
+- **date-fns** (date formatting)
+- **React Router** (navigation)
+
+---
+
+## Support
+
+Questions? Feedback? [Open an issue](https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476) or email steve@example.com.
+
+Built with [Lovable](https://lovable.dev) ❤️
