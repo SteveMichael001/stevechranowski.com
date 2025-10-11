@@ -41,6 +41,16 @@ function generateOAuthSignature(
 }
 
 function generateOAuthHeader(method: string, url: string): string {
+  // Parse URL to separate base URL and query parameters
+  const urlObj = new URL(url);
+  const baseUrl = `${urlObj.protocol}//${urlObj.host}${urlObj.pathname}`;
+  
+  // Extract query parameters
+  const queryParams: Record<string, string> = {};
+  urlObj.searchParams.forEach((value, key) => {
+    queryParams[key] = value;
+  });
+  
   const oauthParams = {
     oauth_consumer_key: API_KEY!,
     oauth_nonce: Math.random().toString(36).substring(2),
@@ -50,10 +60,13 @@ function generateOAuthHeader(method: string, url: string): string {
     oauth_version: "1.0",
   };
 
+  // Combine OAuth params and query params for signature
+  const allParams = { ...oauthParams, ...queryParams };
+
   const signature = generateOAuthSignature(
     method,
-    url,
-    oauthParams,
+    baseUrl, // Use base URL without query parameters
+    allParams, // Include both OAuth and query parameters
     API_SECRET!,
     ACCESS_TOKEN_SECRET!
   );
