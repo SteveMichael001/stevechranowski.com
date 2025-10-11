@@ -9,7 +9,7 @@ export const siteConfig = {
   hero_cta2_text: "What I'm doing now",
   hero_cta2_anchor: "#micro-updates",
   
-  about_text: `I'm Steve - throwing stuff against the wall, building things,  picking lanes. By day, I resell UPS & FedEx services - real sexy. By night, I'm hanging with my fiancé and pup, riffing with my biz partner, experimenting with AI, and staying active.
+  about_text: `I'm Steve - throwing stuff at the wall, building things, trying to leave my mark. By day, I resell UPS & FedEx services. By night, riffing with my biz partner, experimenting with AI, staying active, and spending time with the wifey and pup.
 
 Currently learning: Claude Code,  Agents
 
