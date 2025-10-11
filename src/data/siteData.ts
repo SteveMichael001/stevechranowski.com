@@ -21,7 +21,6 @@ Based in San Diego. Always curious. Skeptical optimist. Reliably verbose.`,
   social_links: [
     { name: "LinkedIn", url: "https://linkedin.com/in/stevechranowski" },
     { name: "Instagram", url: "https://instagram.com/stevechranowski" },
-    { name: "Mastodon", url: "https://mastodon.social/@steve" },
     { name: "Spotify", url: "https://open.spotify.com/user/steve" },
     { name: "Email", url: "mailto:steve@example.com" }
   ],
