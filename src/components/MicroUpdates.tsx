@@ -4,6 +4,13 @@ import { formatDistanceToNow } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface TweetUpdate {
   id: string;
@@ -77,8 +84,14 @@ export const MicroUpdates = () => {
     );
   })();
 
+  // Group updates into blocks of 3
+  const updateGroups = [];
+  for (let i = 0; i < allUpdates.length; i += 3) {
+    updateGroups.push(allUpdates.slice(i, i + 3));
+  }
+
   return (
-    <section id="micro-updates" className="py-20 px-4 bg-muted/30">
+    <section id="micro-updates" className="py-16 px-4 bg-muted/30">
       <div className="w-full max-w-[1100px] mx-auto">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-3xl md:text-4xl font-normal text-foreground">
@@ -101,7 +114,7 @@ export const MicroUpdates = () => {
           )}
         </div>
         
-        <p className="text-muted-foreground mb-12">
+        <p className="text-muted-foreground mb-8">
           {showLiveTweets 
             ? "Live feed from Twitter. Stream-of-consciousness notes. The latest."
             : "Quick updates. Stream-of-consciousness notes. The latest."}
@@ -143,58 +156,72 @@ export const MicroUpdates = () => {
 
         {/* Updates List */}
         {!isLoading && allUpdates.length > 0 && (
-          <div className="space-y-6">
-            {allUpdates.map((update) => {
-              const isTweet = update.id.startsWith('tweet-');
-              
-              return (
-                <div 
-                  key={update.id} 
-                  className="bg-card p-6 rounded-lg border border-border hover:border-accent/50 transition-colors"
-                >
-                  <p className="text-foreground mb-3 leading-relaxed">
-                    {update.text}
-                  </p>
-                  
-                  <div className="flex items-center justify-between flex-wrap gap-3">
-                    <div className="flex items-center gap-3">
-                      {update.tags && update.tags.map((tag) => (
-                        <span 
-                          key={tag} 
-                          className={`text-xs px-2 py-1 rounded ${
-                            tag === 'twitter' 
-                              ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950' 
-                              : 'text-muted-foreground bg-muted'
-                          }`}
+          <Carousel className="w-full">
+            <CarouselContent>
+              {updateGroups.map((group, groupIndex) => (
+                <CarouselItem key={groupIndex}>
+                  <div className="space-y-4">
+                    {group.map((update) => {
+                      const isTweet = update.id.startsWith('tweet-');
+                      
+                      return (
+                        <div 
+                          key={update.id} 
+                          className="bg-card p-4 rounded-lg border border-border hover:border-accent/50 transition-colors"
                         >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <time>
-                        {formatDistanceToNow(new Date(update.date), { addSuffix: true })}
-                      </time>
-                      {update.external_link && (
-                        <a 
-                          href={update.external_link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`flex items-center gap-1 hover:underline ${
-                            isTweet ? 'text-blue-600 dark:text-blue-400' : 'text-accent'
-                          }`}
-                        >
-                          <ExternalLink className="h-3 w-3" />
-                          {isTweet ? 'View on X' : 'Link'}
-                        </a>
-                      )}
-                    </div>
+                          <p className="text-foreground text-sm mb-2 leading-relaxed">
+                            {update.text}
+                          </p>
+                          
+                          <div className="flex items-center justify-between flex-wrap gap-2">
+                            <div className="flex items-center gap-2">
+                              {update.tags && update.tags.map((tag) => (
+                                <span 
+                                  key={tag} 
+                                  className={`text-xs px-2 py-1 rounded ${
+                                    tag === 'twitter' 
+                                      ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950' 
+                                      : 'text-muted-foreground bg-muted'
+                                  }`}
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            
+                            <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                              <time>
+                                {formatDistanceToNow(new Date(update.date), { addSuffix: true })}
+                              </time>
+                              {update.external_link && (
+                                <a 
+                                  href={update.external_link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`flex items-center gap-1 hover:underline ${
+                                    isTweet ? 'text-blue-600 dark:text-blue-400' : 'text-accent'
+                                  }`}
+                                >
+                                  <ExternalLink className="h-3 w-3" />
+                                  {isTweet ? 'View on X' : 'Link'}
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {updateGroups.length > 1 && (
+              <>
+                <CarouselPrevious className="left-0 -translate-x-12" />
+                <CarouselNext className="right-0 translate-x-12" />
+              </>
+            )}
+          </Carousel>
         )}
 
         {/* Empty State */}
