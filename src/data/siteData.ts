@@ -198,7 +198,7 @@ export const projects: Project[] = [
     excerpt: "Launched a house music events and entertainment brand in San Diego with best friend, Hussain",
     link: "https://shindig.productions",
     featured: true,
-    tags: ["live event", "first LLC"]
+    tags: ["live events", "first LLC"]
   }
 ];
 
