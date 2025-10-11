@@ -9,11 +9,11 @@ export const siteConfig = {
   hero_cta2_text: "What I'm doing now",
   hero_cta2_anchor: "#micro-updates",
   
-  about_text: `I'm Steve — building things at the intersection of creativity and pragmatism. By day, I help clients navigate logistics and billing nightmares. By night, I'm experimenting with code, cooking elaborate meals, and occasionally catching waves.
+  about_text: `I'm Steve - throwing stuff against the wall, building things,  picking lanes. By day, I resell UPS & FedEx services - real sexy. By night, I'm hanging with my fiancé and pup, riffing with my biz partner, experimenting with AI, and staying active.
 
-Currently learning: Rust, fermenting vegetables, how to not overthink everything.
+Currently learning: Claude Code,  Agents
 
-Based in San Diego. Always curious. Sometimes skeptical. Reliably verbose.`,
+Based in San Diego. Always curious. Skeptical optimist. Reliably verbose.`,
 
   contact_form_webhook_url: "",
   ga_measurement_id: "",
