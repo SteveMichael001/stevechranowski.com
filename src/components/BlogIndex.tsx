@@ -100,12 +100,6 @@ export const BlogIndex = () => {
             </Link>
           ))}
         </div>
-
-        <div className="text-center">
-          <Button variant="outline" size="lg">
-            View all posts
-          </Button>
-        </div>
       </div>
     </section>
   );
