@@ -35,6 +35,17 @@ Based in San Diego. Always curious. Skeptical optimist. Reliably verbose.`,
   now_status: "2025 — Learning to build in public. One experiment at a time."
 };
 
+// Twitter feed configuration
+export const twitter_config = {
+  enabled: true,
+  username: "stevechranowski",
+  max_tweets: 10,
+  exclude_replies: true,
+  exclude_retweets: true,
+  refresh_interval: 900000, // 15 minutes in milliseconds
+  merge_with_manual: true, // Show both live tweets and manual updates
+};
+
 export interface MicroUpdate {
   id: string;
   text: string;
