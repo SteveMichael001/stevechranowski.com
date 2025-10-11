@@ -195,7 +195,7 @@ export const projects: Project[] = [
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",
-    excerpt: "Event planning toolkit. CRM + logistics + vendor management. Built for small teams.",
+    excerpt: "Launched a house music events and entertainment brand in San Diego with best friend, Hussain",
     link: "https://shindig.productions",
     featured: true,
     tags: ["saas", "events"]
