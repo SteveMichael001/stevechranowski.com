@@ -3,7 +3,7 @@ export const siteConfig = {
   site_name: "Steve Chranowski",
   site_tagline: "Doing things. Shamelessly sharing them.",
   hero_headline: "Doing things. Shamelessly sharing them.",
-  hero_subhead: "Short notes, experiments, and the occasional long piece — direct from San Diego.",
+  hero_subhead: "Short notes, experiments, and an occasional musing by <em>Steve Chranowski</em>",
   hero_cta1_text: "Read latest",
   hero_cta1_anchor: "#writing",
   hero_cta2_text: "What I'm doing now",

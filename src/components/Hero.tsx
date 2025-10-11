@@ -10,9 +10,7 @@ export const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-foreground leading-tight">
             {siteConfig.hero_headline}
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            {siteConfig.hero_subhead}
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: siteConfig.hero_subhead }} />
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button 
               size="lg"
