@@ -192,15 +192,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "proj-3",
-    title: "VibeCode",
-    slug: "vibecode",
-    excerpt: "Real-time music visualizer built with Rust + WebAssembly. Organic animations synced to your tunes.",
-    link: "https://vibecode.dev",
-    featured: true,
-    tags: ["rust", "wasm", "audio"]
-  },
-  {
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",
@@ -208,15 +199,6 @@ export const projects: Project[] = [
     link: "https://shindig.productions",
     featured: true,
     tags: ["saas", "events"]
-  },
-  {
-    id: "proj-1",
-    title: "Logistics Audit Tool",
-    slug: "logistics-audit",
-    excerpt: "Google Sheets template for catching freight billing errors. Saved clients $50k+ so far.",
-    link: "#",
-    featured: false,
-    tags: ["tools", "consulting"]
   }
 ];
 
