@@ -8,19 +8,19 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium mb-4 text-foreground">Navigate</h3>
             <nav className="space-y-2">
-              <a href="#about" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#about" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 About
               </a>
-              <a href="#micro-updates" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#micro-updates" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 Now
               </a>
-              <a href="#writing" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#writing" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 Writing
               </a>
-              <a href="#projects" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#projects" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 Projects
               </a>
-              <a href="#contact" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#contact" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 Contact
               </a>
             </nav>
@@ -35,7 +35,7 @@ export const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors"
+                  className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors"
                 >
                   {link.name}
                 </a>
@@ -46,10 +46,10 @@ export const Footer = () => {
           <div>
             <h3 className="font-medium mb-4 text-foreground">Meta</h3>
             <nav className="space-y-2">
-              <a href="/feed.xml" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="/feed.xml" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 RSS Feed
               </a>
-              <a href="#" className="block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
                 Privacy
               </a>
             </nav>
