@@ -52,6 +52,19 @@ const BlogPost = () => {
           </div>
         </header>
 
+        {/* Featured Image */}
+        {post.featured_image && (
+          <div className="w-full max-w-[1100px] mx-auto px-4 py-8">
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">
+              <img 
+                src={post.featured_image} 
+                alt={post.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Content */}
         <div className="py-16 px-4">
           <div className="w-full max-w-[780px] mx-auto">

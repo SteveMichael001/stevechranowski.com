@@ -26,11 +26,21 @@ export const BlogIndex = () => {
         {featuredPost && (
           <Link to={`/blog/${featuredPost.slug}`} className="block mb-16 group">
             <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all">
-              <div className="aspect-[21/9] bg-muted relative">
-                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                  <span className="text-sm">Featured image</span>
+              {featuredPost.featured_image ? (
+                <div className="aspect-[21/9] bg-muted relative overflow-hidden">
+                  <img 
+                    src={featuredPost.featured_image} 
+                    alt={featuredPost.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-[21/9] bg-muted relative">
+                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                    <span className="text-sm">Featured image</span>
+                  </div>
+                </div>
+              )}
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-4 text-sm text-muted-foreground">
                   <time>{format(new Date(featuredPost.date), 'MMM d, yyyy')}</time>

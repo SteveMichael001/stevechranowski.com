@@ -139,6 +139,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["example", "demo"],
     category: "Essays",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    featured_image: "/src/assets/lorem-ipsum-feature.png",
     body_html: `
       <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       
