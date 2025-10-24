@@ -1,3 +1,5 @@
+import loremIpsumFeature from "@/assets/lorem-ipsum-feature.png";
+
 // Central CMS-editable content
 export const siteConfig = {
   site_name: "Steve Chranowski",
@@ -139,7 +141,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["example", "demo"],
     category: "Essays",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    featured_image: "/src/assets/lorem-ipsum-feature.png",
+    featured_image: loremIpsumFeature,
     body_html: `
       <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       
