@@ -180,7 +180,7 @@ export const MicroUpdates = () => {
                                   key={tag} 
                                   className={`text-xs px-2 py-1 rounded ${
                                     tag === 'twitter' 
-                                      ? 'text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950' 
+                                      ? 'text-background bg-foreground' 
                                       : 'text-muted-foreground bg-muted'
                                   }`}
                                 >
@@ -199,7 +199,7 @@ export const MicroUpdates = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={`flex items-center gap-1 hover:underline ${
-                                    isTweet ? 'text-blue-600 dark:text-blue-400' : 'text-accent'
+                                    isTweet ? 'text-foreground' : 'text-accent'
                                   }`}
                                 >
                                   <ExternalLink className="h-3 w-3" />
