@@ -13,7 +13,7 @@ export const siteConfig = {
 
 Currently learning: Claude Code,  Agents
 
-Based in San Diego. Always curious. Skeptical optimist. Reliably verbose.`,
+Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
 
   contact_form_webhook_url: "",
   ga_measurement_id: "",
