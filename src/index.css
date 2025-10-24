@@ -101,7 +101,7 @@ All colors MUST be HSL.
   }
 
   .prose-reading a {
-    @apply text-accent underline decoration-1 underline-offset-2 hover:decoration-2 transition-all;
+    @apply text-foreground underline decoration-1 underline-offset-2 hover:text-muted-foreground hover:decoration-2 transition-all;
   }
 
   .prose-reading img {
