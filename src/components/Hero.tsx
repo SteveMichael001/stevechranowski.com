@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteData";
+import portraitImage from "@/assets/portrait.png";
 
 export const Hero = () => {
   return (
@@ -30,11 +31,13 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Right: Image placeholder */}
-        <div className="relative aspect-square md:aspect-[4/5] rounded-lg bg-muted overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-            <span className="text-sm">Portrait placeholder</span>
-          </div>
+        {/* Right: Portrait Image */}
+        <div className="relative aspect-square md:aspect-[4/5] rounded-lg overflow-hidden">
+          <img 
+            src={portraitImage} 
+            alt="Steve Chranowski portrait"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
       </div>
     </section>
