@@ -64,7 +64,7 @@ const BlogPost = () => {
                 {post.reading_time} min read
               </div>
               <span>·</span>
-              <span className="text-accent">{post.category}</span>
+              <span className="text-foreground">{post.category}</span>
             </div>
 
             {/* Title */}
@@ -78,7 +78,7 @@ const BlogPost = () => {
                 <Link
                   key={tag}
                   to={`/blog/tag/${tag}`}
-                  className="text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full hover:bg-accent/10 hover:text-accent transition-colors"
+                  className="text-xs text-muted-foreground bg-muted px-3 py-1 rounded-full hover:bg-muted hover:text-muted-foreground hover:underline transition-colors"
                 >
                   {tag}
                 </Link>
@@ -94,7 +94,7 @@ const BlogPost = () => {
             {/* Footer CTA */}
             <div className="mt-16 pt-8 border-t border-border">
               <p className="text-muted-foreground mb-4">
-                Enjoyed this? <Link to="/#contact" className="text-accent underline">Send me a note</Link> or <a href="#" onClick={handleShare} className="text-accent underline">share it</a>.
+                Enjoyed this? <Link to="/#contact" className="text-foreground hover:text-muted-foreground hover:underline">Send me a note</Link> or <a href="#" onClick={handleShare} className="text-foreground hover:text-muted-foreground hover:underline">share it</a>.
               </p>
               <Link to="/#writing">
                 <Button variant="outline">

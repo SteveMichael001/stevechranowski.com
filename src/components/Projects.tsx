@@ -21,23 +21,23 @@ export const Projects = () => {
               rel="noopener noreferrer"
               className="group block"
             >
-              <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-accent/50 transition-all h-full flex flex-col">
+              <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all h-full flex flex-col">
                 <div className="aspect-video bg-muted relative">
                   <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
                     <span className="text-sm">Project image</span>
                   </div>
                   {project.featured && (
-                    <div className="absolute top-3 right-3 bg-accent text-white text-xs px-2 py-1 rounded">
+                    <div className="absolute top-3 right-3 bg-foreground text-white text-xs px-2 py-1 rounded">
                       Featured
                     </div>
                   )}
                 </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-normal text-foreground group-hover:text-accent transition-colors">
+                    <h3 className="text-xl font-normal text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
                       {project.title}
                     </h3>
-                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors flex-shrink-0 ml-2" />
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-muted-foreground transition-colors flex-shrink-0 ml-2" />
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                     {project.excerpt}

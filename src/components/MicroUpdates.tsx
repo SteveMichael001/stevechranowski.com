@@ -147,7 +147,7 @@ export const MicroUpdates = () => {
             </p>
             <button
               onClick={() => refetch()}
-              className="text-accent hover:underline text-sm"
+              className="text-foreground hover:text-muted-foreground hover:underline text-sm"
             >
               Try again
             </button>
@@ -167,7 +167,7 @@ export const MicroUpdates = () => {
                       return (
                         <div 
                           key={update.id} 
-                          className="bg-card p-4 rounded-lg border border-border hover:border-accent/50 transition-colors"
+                          className="bg-card p-4 rounded-lg border border-border hover:border-muted-foreground/50 transition-colors"
                         >
                           <p className="text-foreground text-sm mb-2 leading-relaxed">
                             {update.text}
@@ -198,8 +198,8 @@ export const MicroUpdates = () => {
                                   href={update.external_link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`flex items-center gap-1 hover:underline ${
-                                    isTweet ? 'text-foreground' : 'text-accent'
+                                  className={`flex items-center gap-1 hover:text-muted-foreground hover:underline ${
+                                    isTweet ? 'text-foreground' : 'text-foreground'
                                   }`}
                                 >
                                   <ExternalLink className="h-3 w-3" />

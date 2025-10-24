@@ -25,7 +25,7 @@ export const BlogIndex = () => {
         {/* Featured Post */}
         {featuredPost && (
           <Link to={`/blog/${featuredPost.slug}`} className="block mb-16 group">
-            <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-accent/50 transition-all">
+            <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all">
               <div className="aspect-[21/9] bg-muted relative">
                 <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
                   <span className="text-sm">Featured image</span>
@@ -40,9 +40,9 @@ export const BlogIndex = () => {
                     {featuredPost.reading_time} min
                   </div>
                   <span>·</span>
-                  <span className="text-accent">{featuredPost.category}</span>
+                  <span className="text-foreground">{featuredPost.category}</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-normal mb-3 text-foreground group-hover:text-accent transition-colors">
+                <h3 className="text-2xl md:text-3xl font-normal mb-3 text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
                   {featuredPost.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -71,7 +71,7 @@ export const BlogIndex = () => {
               to={`/blog/${post.slug}`}
               className="group"
             >
-              <article className="bg-card border border-border rounded-lg p-6 hover:border-accent/50 transition-all h-full flex flex-col">
+              <article className="bg-card border border-border rounded-lg p-6 hover:border-muted-foreground/50 transition-all h-full flex flex-col">
                 <div className="flex items-center gap-3 mb-3 text-sm text-muted-foreground">
                   <time>{format(new Date(post.date), 'MMM d, yyyy')}</time>
                   <span>·</span>
@@ -80,7 +80,7 @@ export const BlogIndex = () => {
                     {post.reading_time} min
                   </div>
                 </div>
-                <h3 className="text-xl font-normal mb-2 text-foreground group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-normal mb-2 text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">

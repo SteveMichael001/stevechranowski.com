@@ -21,7 +21,7 @@ export const Events = () => {
 
   const EventCard = ({ event, isPast = false }: { event: typeof events[0], isPast?: boolean }) => (
     <div 
-      className={`bg-card border border-border rounded-lg p-4 hover:border-accent/50 transition-colors ${isPast ? 'opacity-60' : ''}`}
+      className={`bg-card border border-border rounded-lg p-4 hover:border-muted-foreground/50 transition-colors ${isPast ? 'opacity-60' : ''}`}
     >
       <div className="flex flex-col gap-3">
         <h4 className="text-base font-normal text-foreground">
@@ -42,7 +42,7 @@ export const Events = () => {
             href={event.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-accent hover:underline text-xs"
+            className="flex items-center gap-2 text-foreground hover:text-muted-foreground hover:underline text-xs"
           >
             <ExternalLink className="h-3 w-3" />
             Details
