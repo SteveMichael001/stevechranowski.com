@@ -21,6 +21,13 @@ export const Projects = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
+              onClick={(e) => {
+                // Prevent navigation if clicking on carousel controls
+                const target = e.target as HTMLElement;
+                if (target.closest('button') || target.closest('[role="button"]')) {
+                  e.preventDefault();
+                }
+              }}
             >
               <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all h-full flex flex-col">
                 <div className="aspect-square bg-muted relative overflow-hidden">

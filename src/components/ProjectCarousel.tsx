@@ -27,14 +27,8 @@ export const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious 
-        className="left-2" 
-        onClick={(e) => e.stopPropagation()} 
-      />
-      <CarouselNext 
-        className="right-2" 
-        onClick={(e) => e.stopPropagation()} 
-      />
+      <CarouselPrevious className="left-2" />
+      <CarouselNext className="right-2" />
       
       {/* Dot indicators */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
