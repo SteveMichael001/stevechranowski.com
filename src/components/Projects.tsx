@@ -1,6 +1,5 @@
 import { projects } from "@/data/siteData";
 import { ExternalLink } from "lucide-react";
-import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
   return (
@@ -23,27 +22,16 @@ export const Projects = () => {
               className="group block"
             >
               <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all h-full flex flex-col">
-                {project.media ? (
-                  <div className="relative">
-                    <ProjectCarousel media={project.media} projectTitle={project.title} />
-                    {project.featured && (
-                      <div className="absolute top-3 right-3 bg-foreground text-white text-xs px-2 py-1 rounded z-10">
-                        Featured
-                      </div>
-                    )}
+                <div className="aspect-video bg-muted relative">
+                  <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                    <span className="text-sm">Project image</span>
                   </div>
-                ) : (
-                  <div className="aspect-video bg-muted relative">
-                    <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                      <span className="text-sm">Project image</span>
+                  {project.featured && (
+                    <div className="absolute top-3 right-3 bg-foreground text-white text-xs px-2 py-1 rounded">
+                      Featured
                     </div>
-                    {project.featured && (
-                      <div className="absolute top-3 right-3 bg-foreground text-white text-xs px-2 py-1 rounded">
-                        Featured
-                      </div>
-                    )}
-                  </div>
-                )}
+                  )}
+                </div>
                 <div className="p-6 flex-grow flex flex-col">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-xl font-normal text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
