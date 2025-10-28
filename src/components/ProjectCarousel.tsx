@@ -14,16 +14,14 @@ interface ProjectCarouselProps {
 export const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
   return (
     <Carousel className="w-full h-full" onClick={(e) => e.stopPropagation()}>
-      <CarouselContent>
+      <CarouselContent className="h-full">
         {images.map((image, index) => (
-          <CarouselItem key={index}>
-            <div className="aspect-video relative">
-              <img
-                src={image}
-                alt={`${title} - Image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <CarouselItem key={index} className="h-full">
+            <img
+              src={image}
+              alt={`${title} - Image ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
           </CarouselItem>
         ))}
       </CarouselContent>
