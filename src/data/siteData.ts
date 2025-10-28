@@ -1,4 +1,8 @@
 import loremIpsumFeature from "@/assets/lorem-ipsum-feature.png";
+import shindig1 from "@/assets/shindig-1.jpg";
+import shindig2 from "@/assets/shindig-2.jpg";
+import shindig3 from "@/assets/shindig-3.jpg";
+import shindig4 from "@/assets/shindig-4.jpg";
 
 // Central CMS-editable content
 export const siteConfig = {
@@ -186,6 +190,7 @@ export interface Project {
   title: string;
   slug: string;
   image?: string;
+  media?: string[];
   excerpt: string;
   link: string;
   featured: boolean;
@@ -197,6 +202,7 @@ export const projects: Project[] = [
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",
+    media: [shindig1, shindig2, shindig3, shindig4],
     excerpt: "Launched a house music events and entertainment brand in San Diego with best friend, Hussain",
     link: "https://shindig.productions",
     featured: true,
