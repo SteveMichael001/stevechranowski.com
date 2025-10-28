@@ -23,7 +23,7 @@ export const Projects = () => {
               className="group block"
             >
               <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all h-full flex flex-col">
-                <div className="aspect-video bg-muted relative">
+                <div className="aspect-square bg-muted relative overflow-hidden">
                   {project.images && project.images.length > 0 ? (
                     <ProjectCarousel images={project.images} title={project.title} />
                   ) : project.image ? (

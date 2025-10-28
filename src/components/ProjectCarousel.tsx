@@ -13,15 +13,17 @@ interface ProjectCarouselProps {
 
 export const ProjectCarousel = ({ images, title }: ProjectCarouselProps) => {
   return (
-    <Carousel className="absolute inset-0" onClick={(e) => e.stopPropagation()}>
+    <Carousel className="w-full h-full" onClick={(e) => e.stopPropagation()}>
       <CarouselContent className="-ml-0 h-full">
         {images.map((image, index) => (
-          <CarouselItem key={index} className="pl-0 h-full">
-            <img
-              src={image}
-              alt={`${title} - Image ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
+          <CarouselItem key={index} className="pl-0 h-full basis-full">
+            <div className="w-full h-full">
+              <img
+                src={image}
+                alt={`${title} - Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
