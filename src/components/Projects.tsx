@@ -1,5 +1,6 @@
 import { projects } from "@/data/siteData";
 import { ExternalLink } from "lucide-react";
+import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
   return (
@@ -23,7 +24,9 @@ export const Projects = () => {
             >
               <article className="bg-card border border-border rounded-lg overflow-hidden hover:border-muted-foreground/50 transition-all h-full flex flex-col">
                 <div className="aspect-video bg-muted relative">
-                  {project.image ? (
+                  {project.images && project.images.length > 0 ? (
+                    <ProjectCarousel images={project.images} title={project.title} />
+                  ) : project.image ? (
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -35,7 +38,7 @@ export const Projects = () => {
                     </div>
                   )}
                   {project.featured && (
-                    <div className="absolute top-3 right-3 bg-foreground text-background text-xs px-2 py-1 rounded">
+                    <div className="absolute top-3 right-3 bg-foreground text-background text-xs px-2 py-1 rounded z-10">
                       Featured
                     </div>
                   )}
