@@ -42,7 +42,7 @@ Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
 
 // Twitter feed configuration
 export const twitter_config = {
-  enabled: true,
+  enabled: false, // Temporarily disabled due to API rate limits
   username: "stevechranowski",
   max_tweets: 10,
   exclude_replies: true,

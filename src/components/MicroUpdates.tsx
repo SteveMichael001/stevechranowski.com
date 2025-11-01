@@ -46,6 +46,10 @@ const useTweets = (enabled: boolean) => {
 
       if (error) {
         console.error('Error fetching tweets:', error);
+        // Check if it's a rate limit error and throw a specific error
+        if (error.message?.includes('429')) {
+          throw new Error('RATE_LIMIT');
+        }
         throw error;
       }
 
@@ -53,9 +57,17 @@ const useTweets = (enabled: boolean) => {
       return data as FetchTweetsResponse;
     },
     enabled: enabled,
-    staleTime: twitter_config.refresh_interval,
-    refetchInterval: twitter_config.refresh_interval,
-    retry: 2,
+    staleTime: Infinity, // Cache indefinitely
+    refetchInterval: false, // Disable automatic refetching
+    refetchOnWindowFocus: false, // Don't refetch on window focus
+    retry: (failureCount, error) => {
+      // Don't retry if it's a rate limit error
+      if (error.message === 'RATE_LIMIT') {
+        return false;
+      }
+      // Only retry once for other errors
+      return failureCount < 1;
+    },
   });
 };
 
@@ -143,14 +155,19 @@ export const MicroUpdates = () => {
         {error && showLiveTweets && (
           <div className="bg-card p-6 rounded-lg border border-border">
             <p className="text-muted-foreground mb-3">
-              Unable to load live tweets. {twitter_config.merge_with_manual ? "Showing manual updates instead." : ""}
+              {error.message === 'RATE_LIMIT' 
+                ? "Twitter API rate limit reached. Please try again later." 
+                : "Unable to load live tweets."} 
+              {twitter_config.merge_with_manual ? " Showing manual updates instead." : ""}
             </p>
-            <button
-              onClick={() => refetch()}
-              className="text-foreground hover:text-muted-foreground hover:underline text-sm"
-            >
-              Try again
-            </button>
+            {error.message !== 'RATE_LIMIT' && (
+              <button
+                onClick={() => refetch()}
+                className="text-foreground hover:text-muted-foreground hover:underline text-sm"
+              >
+                Try again
+              </button>
+            )}
           </div>
         )}
 
