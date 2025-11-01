@@ -72,29 +72,15 @@ const useTweets = (enabled: boolean) => {
 };
 
 export const MicroUpdates = () => {
-  const [showLiveTweets, setShowLiveTweets] = useState(twitter_config.enabled);
-  const { data: tweetsData, isLoading, error, refetch } = useTweets(showLiveTweets);
+  // Completely disable Twitter integration for now
+  const showLiveTweets = false;
+  const tweetsData = undefined;
+  const isLoading = false;
+  const error = null;
+  const refetch = () => {};
 
-  // Combine live tweets with manual updates
-  const allUpdates = (() => {
-    if (!showLiveTweets || !twitter_config.merge_with_manual) {
-      // Show only live tweets if merge is disabled
-      if (showLiveTweets && tweetsData?.updates) {
-        return tweetsData.updates;
-      }
-      // Fallback to manual updates
-      return microUpdates.filter(u => u.published);
-    }
-
-    // Merge both sources
-    const manual = microUpdates.filter(u => u.published);
-    const live = tweetsData?.updates || [];
-    
-    // Combine and sort by date (newest first)
-    return [...manual, ...live].sort((a, b) => 
-      new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-  })();
+  // Use only manual updates
+  const allUpdates = microUpdates.filter(u => u.published);
 
   // Group updates into blocks of 3
   const updateGroups = [];
@@ -109,70 +95,15 @@ export const MicroUpdates = () => {
           <h2 className="text-3xl md:text-4xl font-normal text-foreground">
             Now
           </h2>
-          
-          {showLiveTweets && tweetsData?.fetched_at && (
-            <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <span>
-                Updated {formatDistanceToNow(new Date(tweetsData.fetched_at), { addSuffix: true })}
-              </span>
-              <button
-                onClick={() => refetch()}
-                className="p-2 hover:bg-muted rounded-md transition-colors"
-                title="Refresh tweets"
-              >
-                <RefreshCw className="h-4 w-4" />
-              </button>
-            </div>
-          )}
         </div>
         
         <p className="text-muted-foreground mb-8">
-          {showLiveTweets 
-            ? "Live feed from Twitter. Stream-of-consciousness notes. The latest."
-            : "Quick updates. Stream-of-consciousness notes. The latest."}
+          Quick updates. Stream-of-consciousness notes. The latest.
         </p>
 
-        {/* Loading State */}
-        {isLoading && showLiveTweets && (
-          <div className="space-y-6">
-            {[1, 2, 3].map((i) => (
-              <div 
-                key={i} 
-                className="bg-card p-6 rounded-lg border border-border animate-pulse"
-              >
-                <div className="h-4 bg-muted rounded w-3/4 mb-3"></div>
-                <div className="h-4 bg-muted rounded w-1/2 mb-3"></div>
-                <div className="flex gap-3">
-                  <div className="h-6 bg-muted rounded w-16"></div>
-                  <div className="h-6 bg-muted rounded w-20"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Error State */}
-        {error && showLiveTweets && (
-          <div className="bg-card p-6 rounded-lg border border-border">
-            <p className="text-muted-foreground mb-3">
-              {error.message === 'RATE_LIMIT' 
-                ? "Twitter API rate limit reached. Please try again later." 
-                : "Unable to load live tweets."} 
-              {twitter_config.merge_with_manual ? " Showing manual updates instead." : ""}
-            </p>
-            {error.message !== 'RATE_LIMIT' && (
-              <button
-                onClick={() => refetch()}
-                className="text-foreground hover:text-muted-foreground hover:underline text-sm"
-              >
-                Try again
-              </button>
-            )}
-          </div>
-        )}
 
         {/* Updates List */}
-        {!isLoading && allUpdates.length > 0 && (
+        {allUpdates.length > 0 && (
           <Carousel className="w-full">
             <CarouselContent>
               {updateGroups.map((group, groupIndex) => (
@@ -242,7 +173,7 @@ export const MicroUpdates = () => {
         )}
 
         {/* Empty State */}
-        {!isLoading && allUpdates.length === 0 && (
+        {allUpdates.length === 0 && (
           <div className="bg-card p-6 rounded-lg border border-border text-center">
             <p className="text-muted-foreground">No recent updates</p>
           </div>
