@@ -139,7 +139,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "post-1",
-    title: "Lorem Ipsum Dolor Sit Amet",
+    title: "An Ode to Discipline",
     slug: "lorem-ipsum",
     date: "2025-10-07T10:00:00Z",
     tags: ["example", "demo"],
