@@ -4,53 +4,48 @@ export const Footer = () => {
   return (
     <footer className="py-12 px-4 border-t border-border">
       <div className="w-full max-w-[1100px] mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-12 mb-8">
+          {/* Navigate Section */}
           <div>
             <h3 className="font-medium mb-4 text-foreground">Navigate</h3>
-            <nav className="space-y-2">
-              <a href="#about" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
-                About
-              </a>
-              <a href="#micro-updates" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
-                Now
-              </a>
-              <a href="#writing" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+            <nav className="flex flex-col gap-2">
+              <a href="#writing" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">
                 Writing
               </a>
-              <a href="#projects" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#projects" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">
                 Projects
               </a>
-              <a href="#contact" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
+              <a href="#contact" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">
                 Contact
               </a>
             </nav>
           </div>
 
+          {/* Connect Section */}
           <div>
             <h3 className="font-medium mb-4 text-foreground">Connect</h3>
-            <nav className="space-y-2">
-              {siteConfig.social_links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          <div>
-            <h3 className="font-medium mb-4 text-foreground">Meta</h3>
-            <nav className="space-y-2">
-              <a href="/feed.xml" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
-                RSS Feed
+            <nav className="flex flex-col gap-2">
+              <a
+                href="https://linkedin.com/in/stevechranowski"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
+              >
+                LinkedIn
               </a>
-              <a href="#" className="inline-block text-muted-foreground hover:text-muted-foreground hover:underline transition-colors">
-                Privacy
+              <a
+                href="https://instagram.com/stevechranowski"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="mailto:stevechranowski@gmail.com"
+                className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
+              >
+                Email
               </a>
             </nav>
           </div>
@@ -61,7 +56,7 @@ export const Footer = () => {
             {siteConfig.now_status}
           </p>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} {siteConfig.site_name}. Built with care. Open source.
+            © {new Date().getFullYear()} {siteConfig.site_name}. Built with care.
           </p>
         </div>
       </div>

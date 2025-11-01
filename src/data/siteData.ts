@@ -171,6 +171,107 @@ export const blogPosts: BlogPost[] = [
     reading_time: 4,
     published: true,
     featured: true
+  },
+  {
+    id: "post-2",
+    title: "Building in Public: Why I'm Sharing Everything",
+    slug: "building-in-public",
+    date: "2025-09-28T14:00:00Z",
+    tags: ["business", "transparency", "learning"],
+    category: "Essays",
+    excerpt: "Most entrepreneurs hide their process. I'm doing the opposite. Here's why documenting the messy middle might be the smartest thing I've ever done.",
+    body_html: `
+      <p class="drop-cap">I used to think that success meant keeping your cards close to your chest. Don't show your hand. Don't reveal your strategy. Don't let anyone see you struggle.</p>
+
+      <p>But somewhere along the way, I realized that hiding the process was costing me more than protecting it. So I made a decision: build everything in public. Share the wins, the losses, the pivots, and the boring stuff in between.</p>
+
+      <h2>The Fear of Being Judged</h2>
+
+      <p>The first time I posted about a failed project, I expected crickets—or worse, mockery. Instead, I got messages from strangers saying, "I needed to hear this." People connected with the honesty more than they ever connected with the polished highlight reel.</p>
+
+      <p>Building in public isn't about oversharing for attention. It's about creating a record of the journey. It's about helping someone who's three steps behind you. It's about accountability.</p>
+
+      <h2>What I've Learned So Far</h2>
+
+      <p><strong>Transparency builds trust faster than perfection.</strong> When you show your work—the messy prototypes, the late-night debugging sessions, the revenue numbers—people see you as real, not as a brand trying to sell them something.</p>
+
+      <p><strong>Feedback comes to those who ask publicly.</strong> I've gotten better product ideas from Twitter replies than from months of private brainstorming. When you build in public, your audience becomes your co-conspirator.</p>
+
+      <p><strong>Documentation is a gift to your future self.</strong> Every update I share is a breadcrumb for when I inevitably forget why I made a certain decision. Public updates force clarity.</p>
+
+      <h2>The Messy Middle is Where Growth Happens</h2>
+
+      <p>Most people only share the before and after. The dumpster fire apartment renovation photo next to the stunning finished kitchen. The "I was broke" story next to the "now I'm thriving" flex.</p>
+
+      <p>But the messy middle—the part where you're figuring it out in real time—that's where the magic is. That's where the lessons are. That's the part worth documenting.</p>
+
+      <p>So I'm sharing it all. The experiments. The setbacks. The small wins that don't look impressive but feel monumental. Because if I can help one person avoid a mistake I made, or inspire someone to start their own thing, then the vulnerability is worth it.</p>
+
+      <h2>What's Next</h2>
+
+      <p>I'm committing to weekly updates on whatever I'm building. No filter. No perfect lighting. Just the raw, unpolished journey of trying to create something from nothing.</p>
+
+      <p>If you're on a similar path, I'd love to hear from you. Let's build in public together.</p>
+    `,
+    reading_time: 3,
+    published: true,
+    featured: false
+  },
+  {
+    id: "post-3",
+    title: "How I Use AI to 10x My Productivity (Without Losing My Soul)",
+    slug: "ai-productivity",
+    date: "2025-10-15T09:30:00Z",
+    tags: ["AI", "productivity", "tools"],
+    category: "Guides",
+    excerpt: "AI tools are everywhere. But most people use them wrong. Here's how I integrate AI into my workflow without becoming dependent—or lazy.",
+    body_html: `
+      <p class="drop-cap">Everyone's talking about AI like it's either going to save us or destroy us. Meanwhile, I'm over here using it to write better emails and debug code faster. The truth is, AI is just a tool—and like any tool, it's all about how you use it.</p>
+
+      <p>I've been experimenting with AI assistants for the past year, and I've landed on a system that genuinely makes me more productive without turning me into a passive consumer of machine-generated output.</p>
+
+      <h2>Rule #1: AI is a Thought Partner, Not a Replacement</h2>
+
+      <p>I don't ask AI to "write a blog post about X." That's lazy, and the output is always generic. Instead, I use it as a sparring partner. I'll dump my rough ideas, ask it to poke holes in my logic, or request it to reframe something in a way I hadn't considered.</p>
+
+      <p>The final work is still mine. The AI just helps me get unstuck faster.</p>
+
+      <h2>Rule #2: Automate the Boring Stuff</h2>
+
+      <p><strong>Email drafts.</strong> I use AI to generate first drafts of routine emails. I edit them to add personality, but it saves me 10+ minutes per day.</p>
+
+      <p><strong>Code boilerplate.</strong> Writing CRUD endpoints for the 100th time? AI can scaffold it in seconds. I review, refactor, and move on.</p>
+
+      <p><strong>Meeting summaries.</strong> After calls, I feed the transcript to an AI and get a clean summary with action items. Game changer.</p>
+
+      <h2>Rule #3: Keep the Human Touch</h2>
+
+      <p>Here's where most people go wrong: they outsource their voice. AI-generated content is getting better, but it still lacks soul. It doesn't have *your* experiences, your quirks, your humor.</p>
+
+      <p>So I edit everything. I add stories. I inject personality. I make sure it sounds like me, not like a corporate blog post written by an algorithm.</p>
+
+      <h2>My Current Stack</h2>
+
+      <p>For the curious, here's what I'm using:</p>
+
+      <ul>
+        <li><strong>Claude Code</strong> – For coding tasks, debugging, refactoring</li>
+        <li><strong>ChatGPT</strong> – General research, brainstorming, email drafts</li>
+        <li><strong>Notion AI</strong> – Summarizing meeting notes, organizing ideas</li>
+        <li><strong>Grammarly</strong> – Catching typos I'd otherwise miss</li>
+      </ul>
+
+      <h2>The Bottom Line</h2>
+
+      <p>AI won't make you creative. It won't give you good ideas. It won't replace deep work.</p>
+
+      <p>But it *will* free up mental bandwidth for the stuff that actually matters. Use it to handle the grunt work, so you can focus on the work that only you can do.</p>
+
+      <p>That's the sweet spot.</p>
+    `,
+    reading_time: 5,
+    published: true,
+    featured: false
   }
 ];
 
