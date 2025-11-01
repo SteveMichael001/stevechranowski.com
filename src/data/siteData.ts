@@ -28,7 +28,7 @@ Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
     { name: "LinkedIn", url: "https://linkedin.com/in/stevechranowski" },
     { name: "Instagram", url: "https://instagram.com/stevechranowski" },
     { name: "Spotify", url: "https://open.spotify.com/user/steve" },
-    { name: "Email", url: "mailto:steve@example.com" }
+    { name: "Email", url: "mailto:stevechranowski@gmail.com" } // TODO: Update with your actual email
   ],
 
   theme_colors: {
@@ -38,17 +38,6 @@ Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
   },
 
   now_status: "2025 — Learning to build in public. One experiment at a time."
-};
-
-// Twitter feed configuration
-export const twitter_config = {
-  enabled: false, // Temporarily disabled due to API rate limits
-  username: "stevechranowski",
-  max_tweets: 10,
-  exclude_replies: true,
-  exclude_retweets: true,
-  refresh_interval: 900000, // 15 minutes in milliseconds
-  merge_with_manual: true, // Show both live tweets and manual updates
 };
 
 export interface MicroUpdate {

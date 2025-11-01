@@ -17,10 +17,15 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Note: This is a demo form. To make it functional:
+    // 1. Sign up for a free service like Web3Forms (https://web3forms.com)
+    // 2. Get your access key
+    // 3. Replace the demo code below with actual form submission
+
+    // Demo mode - just shows a message
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success("Message sent! I'll get back to you soon.");
+
+    toast.info("Demo mode: Please email me directly at stevechranowski@gmail.com");
     setFormData({ name: "", email: "", reason: "say hi", message: "" });
     setIsSubmitting(false);
   };
@@ -31,9 +36,16 @@ export const Contact = () => {
         <h2 className="text-3xl md:text-4xl font-normal mb-2 text-foreground">
           Get in touch
         </h2>
-        <p className="text-muted-foreground mb-12">
+        <p className="text-muted-foreground mb-8">
           Say hi. Ask a question. Propose a collaboration. I respond to everything.
         </p>
+
+        <div className="bg-muted/50 border border-border rounded-lg p-4 mb-8">
+          <p className="text-sm text-muted-foreground">
+            📝 <strong>Demo Mode:</strong> This form is currently for display purposes.
+            Please email me directly at <a href="mailto:stevechranowski@gmail.com" className="text-foreground underline hover:text-accent">stevechranowski@gmail.com</a>
+          </p>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
