@@ -26,7 +26,7 @@ export const Footer = () => {
             <h3 className="font-medium mb-4 text-foreground">Connect</h3>
             <nav className="flex flex-col gap-2">
               <a
-                href="https://linkedin.com/in/stevechranowski"
+                href="https://www.linkedin.com/in/stevechranowski"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
@@ -34,7 +34,7 @@ export const Footer = () => {
                 LinkedIn
               </a>
               <a
-                href="https://instagram.com/stevechranowski"
+                href="https://www.instagram.com/stevechranowski"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
