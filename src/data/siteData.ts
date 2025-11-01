@@ -25,7 +25,7 @@ Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
   ga_measurement_id: "",
   
   social_links: [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/stevechranowski" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/stevenchranowski/" },
     { name: "Instagram", url: "https://www.instagram.com/stevemichael.001/" },
     { name: "Spotify", url: "https://open.spotify.com/user/steve" },
     { name: "Email", url: "mailto:stevenchranowski3@gmail.com" }

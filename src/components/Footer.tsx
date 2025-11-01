@@ -26,7 +26,7 @@ export const Footer = () => {
             <h3 className="font-medium mb-4 text-foreground">Connect</h3>
             <nav className="flex flex-col gap-2">
               <a
-                href="https://www.linkedin.com/in/stevechranowski"
+                href="https://www.linkedin.com/in/stevenchranowski/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
