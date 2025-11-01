@@ -204,7 +204,7 @@ export const projects: Project[] = [
     slug: "shindig",
     images: [shindigProject, shindigBanner2, shindigBanner3, shindigBanner4],
     excerpt: "Launched a house music events and entertainment brand in San Diego with best friend, Hussain",
-    link: "https://shindig.productions",
+    link: "https://www.instagram.com/shindigusa/",
     featured: true,
     tags: ["live events", "first LLC"]
   }
