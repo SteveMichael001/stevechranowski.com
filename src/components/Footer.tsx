@@ -34,7 +34,7 @@ export const Footer = () => {
                 LinkedIn
               </a>
               <a
-                href="https://www.instagram.com/stevechranowski"
+                href="https://www.instagram.com/stevemichael.001/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
