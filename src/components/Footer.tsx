@@ -42,7 +42,7 @@ export const Footer = () => {
                 Instagram
               </a>
               <a
-                href="mailto:stevechranowski@gmail.com"
+                href="mailto:stevenchranowski3@gmail.com"
                 className="text-muted-foreground hover:text-foreground hover:underline transition-colors"
               >
                 Email

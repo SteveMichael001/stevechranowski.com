@@ -25,7 +25,7 @@ export const Contact = () => {
     // Demo mode - just shows a message
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    toast.info("Demo mode: Please email me directly at stevechranowski@gmail.com");
+    toast.info("Demo mode: Please email me directly at stevenchranowski3@gmail.com");
     setFormData({ name: "", email: "", reason: "say hi", message: "" });
     setIsSubmitting(false);
   };
@@ -43,7 +43,7 @@ export const Contact = () => {
         <div className="bg-muted/50 border border-border rounded-lg p-4 mb-8">
           <p className="text-sm text-muted-foreground">
             📝 <strong>Demo Mode:</strong> This form is currently for display purposes.
-            Please email me directly at <a href="mailto:stevechranowski@gmail.com" className="text-foreground underline hover:text-accent">stevechranowski@gmail.com</a>
+            Please email me directly at <a href="mailto:stevenchranowski3@gmail.com" className="text-foreground underline hover:text-accent">stevenchranowski3@gmail.com</a>
           </p>
         </div>
 
