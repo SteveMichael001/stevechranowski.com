@@ -26,7 +26,7 @@ export const Header = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="relative z-50"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
         </Button>
       </div>
 
