@@ -219,57 +219,68 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "post-3",
-    title: "How I Use AI to 10x My Productivity (Without Losing My Soul)",
-    slug: "ai-productivity",
+    title: "The Great Rate Hike: How FedEx & UPS Price Increases Gut Your Shipping Budget",
+    slug: "carrier-pricing-reality-check",
     date: "2025-10-15T09:30:00Z",
-    tags: ["AI", "productivity", "tools"],
-    category: "Guides",
-    excerpt: "AI tools are everywhere. But most people use them wrong. Here's how I integrate AI into my workflow without becoming dependent—or lazy.",
+    tags: ["logistics", "business", "shipping"],
+    category: "Essays",
+    excerpt: "As a parcel shipping advisor, I've watched FedEx and UPS crank up U.S. domestic rates every year from 2022 through 2025. Despite their PR about 'enhancing service,' these hikes are hammering your margins.",
     body_html: `
-      <p class="drop-cap">Everyone's talking about AI like it's either going to save us or destroy us. Meanwhile, I'm over here using it to write better emails and debug code faster. The truth is, AI is just a tool—and like any tool, it's all about how you use it.</p>
+      <p class="drop-cap">As a parcel shipping advisor, I've watched FedEx and UPS crank up U.S. domestic rates every year from 2022 through 2025. Despite their PR about "enhancing service," these hikes – on base rates, fuel surcharges, and endless fees – are hammering your margins and driving up costs for you and your customers. Below is a no-nonsense look at what's really happening to your shipping costs and why it's bad for business.</p>
 
-      <p>I've been experimenting with AI assistants for the past year, and I've landed on a system that genuinely makes me more productive without turning me into a passive consumer of machine-generated output.</p>
+      <h2>What This Means for Your Business</h2>
 
-      <h2>Rule #1: AI is a Thought Partner, Not a Replacement</h2>
+      <p><strong>Shrinking Margins:</strong> Annual rate increases of 5.9%–6.9% (every single year) compound into double-digit cost growth. When surcharges are factored in, many shippers saw total cost increases north of 10% in a single year.</p>
 
-      <p>I don't ask AI to "write a blog post about X." That's lazy, and the output is always generic. Instead, I use it as a sparring partner. I'll dump my rough ideas, ask it to poke holes in my logic, or request it to reframe something in a way I hadn't considered.</p>
+      <p><strong>Surcharge Overload:</strong> Fuel surcharges, residential fees, and handling surcharges now account for 30–40% of total shipping spend, up from ~10–15% pre-2020. Most are automatically applied, often unnoticed.</p>
 
-      <p>The final work is still mine. The AI just helps me get unstuck faster.</p>
+      <p><strong>Paying More for Less Service:</strong> Despite higher rates, carriers have reduced delivery windows, ended weekend services in some areas, and consolidated facilities. Your access to service is shrinking.</p>
 
-      <h2>Rule #2: Automate the Boring Stuff</h2>
+      <p><strong>Customer Experience Erosion:</strong> Delays, reduced flexibility, and higher pass-through costs impact your brand promise to the customer.</p>
 
-      <p><strong>Email drafts.</strong> I use AI to generate first drafts of routine emails. I edit them to add personality, but it saves me 10+ minutes per day.</p>
+      <h2>2022–2025: Annual Rate Hikes Are the New Normal</h2>
 
-      <p><strong>Code boilerplate.</strong> Writing CRUD endpoints for the 100th time? AI can scaffold it in seconds. I review, refactor, and move on.</p>
-
-      <p><strong>Meeting summaries.</strong> After calls, I feed the transcript to an AI and get a clean summary with action items. Game changer.</p>
-
-      <h2>Rule #3: Keep the Human Touch</h2>
-
-      <p>Here's where most people go wrong: they outsource their voice. AI-generated content is getting better, but it still lacks soul. It doesn't have *your* experiences, your quirks, your humor.</p>
-
-      <p>So I edit everything. I add stories. I inject personality. I make sure it sounds like me, not like a corporate blog post written by an algorithm.</p>
-
-      <h2>My Current Stack</h2>
-
-      <p>For the curious, here's what I'm using:</p>
+      <p>FedEx and UPS used to raise prices by ~4.9% annually. That ended in 2022. Here's what followed:</p>
 
       <ul>
-        <li><strong>Claude Code</strong> – For coding tasks, debugging, refactoring</li>
-        <li><strong>ChatGPT</strong> – General research, brainstorming, email drafts</li>
-        <li><strong>Notion AI</strong> – Summarizing meeting notes, organizing ideas</li>
-        <li><strong>Grammarly</strong> – Catching typos I'd otherwise miss</li>
+        <li><strong>2022:</strong> +5.9% average GRI</li>
+        <li><strong>2023:</strong> +6.9% — the steepest in over a decade</li>
+        <li><strong>2024:</strong> +5.9%</li>
+        <li><strong>2025:</strong> +5.9% (FedEx already confirmed)</li>
       </ul>
 
-      <h2>The Bottom Line</h2>
+      <p>These numbers only reflect base rate increases. With surcharges added, effective shipping cost growth has been much higher. Cumulatively, most shippers are paying 25–30% more today than they did in 2021, even if volume stayed flat.</p>
 
-      <p>AI won't make you creative. It won't give you good ideas. It won't replace deep work.</p>
+      <h2>Surcharges and "Fee Creep": The Silent Profit Killers</h2>
 
-      <p>But it *will* free up mental bandwidth for the stuff that actually matters. Use it to handle the grunt work, so you can focus on the work that only you can do.</p>
+      <p><strong>Fuel Surcharges – Quiet Climbs:</strong> Between 2024 and 2025, FedEx and UPS each raised their fuel surcharge tables multiple times. By mid-2025, UPS Ground fuel surcharges climbed from ~15% to over 19%, and FedEx hit 20.5%, despite falling diesel costs. A 4 percentage point increase in the fuel surcharge can quietly add over $2,400 in shipping costs per year for a business spending $5,000 per month on shipping.</p>
 
-      <p>That's the sweet spot.</p>
+      <h2>Current Shipping Fees and Strategies</h2>
+
+      <p><strong>Residential & Delivery Area Surcharges:</strong> These fees have risen steadily and apply to more ZIP codes than ever. UPS's Remote Area surcharge now sits around $14 per package, while FedEx's similar surcharges apply across a growing list of delivery zones.</p>
+
+      <p><strong>Oversize & Handling Fees:</strong> These are where the real damage hits:</p>
+
+      <ul>
+        <li>FedEx Additional Handling: Up to $55 per package based on zone and criteria</li>
+        <li>UPS Additional Handling: Also hitting $50+ depending on dimension or weight</li>
+        <li>FedEx Oversize: Tops out at $305 per package in 2025</li>
+        <li>UPS Large Package Surcharge (Residential): Reaches $297.50</li>
+      </ul>
+
+      <p>These fees have risen 20–28% annually for 3 years straight, far outpacing base GRIs.</p>
+
+      <h2>Higher Prices, Less Service</h2>
+
+      <p><strong>FedEx Network Consolidation:</strong> Shut down 100+ Ground and Express stations, ended Sunday delivery in many ZIPs, and removed service from several FedEx Office locations. All part of a cost-cutting initiative — with no price breaks for you.</p>
+
+      <p><strong>UPS: Revenue Over Volume:</strong> Focused on high-margin shipments. Their "Better not Bigger" strategy is about maximizing revenue per piece — not growing total volume. For many shippers with ~$5–50K monthly spend, this translated into effective rate inflation without access to enterprise-tier pricing support.</p>
+
+      <h2>Bottom Line</h2>
+
+      <p>If you ship heavier, larger, or time-sensitive parcels, you've been hit hardest — not just by rate hikes, but by aggressive fee layering. The carriers are optimizing for their shareholders, not your business. Understanding these changes is the first step to fighting back.</p>
     `,
-    reading_time: 5,
+    reading_time: 6,
     published: true,
     featured: false
   }
