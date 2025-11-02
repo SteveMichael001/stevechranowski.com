@@ -129,46 +129,48 @@ export const blogPosts: BlogPost[] = [
   {
     id: "post-1",
     title: "An Ode to Discipline",
-    slug: "lorem-ipsum",
-    date: "2025-10-07T10:00:00Z",
-    tags: ["example", "demo"],
+    slug: "ode-to-discipline",
+    date: "2025-11-10T10:00:00Z",
+    tags: ["personal", "discipline", "growth"],
     category: "Essays",
-    excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    excerpt: "The worst pains in life come from lack of discipline. The greatest pains in life come from strength in persistence.",
     featured_image: loremIpsumFeature,
     body_html: `
-      <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="drop-cap">The worst pains in life come from lack of discipline. The greatest pains in life come from strength in persistence.</p>
       
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>I was 11 years old, sitting in the nook of our home in front of my parents. I hated running at the time, I really didn't enjoy a ton of physical excursion in general. Don't get me wrong, our father made sure we were three sport athletes but it wasn't my strongest interest.</p>
 
-      <h2>Excepteur Sint Occaecat</h2>
-      
-      <p>Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <p>So it was something as simple as pulling my parents for a chat and telling them I didn't want to continue playing travel soccer… in the middle of the season. There was something excruciatingly painful when I brought myself to do it, not exactly sure why, but looking back I think it was because I knew I was letting myself down.</p>
 
-      <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p>I put on my biggest pouty face - I wasn't afraid to pull crying jags. I also made sure the reason for quitting was not about my distaste for cardio - that wasn't going to move the needle. It was because I was no longer interested in the game, my time would be better spent on my studies or a different sport. Learned at a young age that we had to strategically plan these conversations to get what we wanted, at least that's what my brother and I told ourselves.</p>
 
-      <h2>Nemo Enim Ipsam</h2>
+      <p>My parents folded. I won.</p>
 
-      <p><strong>Voluptatem quia voluptas sit aspernatur.</strong> Aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <h2>The Slippery Slope</h2>
 
-      <p><strong>Neque porro quisquam est.</strong> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+      <p>When I think of discipline, I'm constantly reminded of this memory. It kicked off a string of accepting mediocrity, which I now soley blame on my lack of self-discipline. My father was a creature of competition; I rebelled by being lax. It was the "cool" thing to do. I started making more and more decisions to be "cool" instead of being myself, and at that time, I had no understanding of long-term consequences. I became more focused on short-term pleasure while leveraging my natural-born gifts to get me by.</p>
 
-      <p><strong>Ut labore et dolore magnam aliquam.</strong> Quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+      <p>Everything would be just fine…Well, everything has been fine, everything has been more than fine, but I wasn't put on this planet to be ordinary. You know how the next line goes…I want to be extraordinary and in order to do so I want to be in an endless pursuit of discipline. I know it's possible - I've done it for short stints and never feel better, but I always come creeping back for shorter and shorter periods. Progress but not there yet.</p>
 
-      <h2>Quis Autem Vel Eum</h2>
+      <h2>What Holds Me Back</h2>
 
-      <p>Iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+      <p>When I think about what personally prevents me from being my best self, a disciplined being who does what he says he is going to do, who does what he truly loves, I can list the items immediately…</p>
 
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+      <p>The ironic part is the items that I superficially enjoy, the short-term, immediate dopamine rushes are what hold me back - the drinking, smoking, sexual fixations, drugs. Mine might sound more vulgar than yours, but we all have this list and we tell ourselves over and over that we'll stop and then we just continue the roller coaster. Immediate high followed by a rush of regret, self-doubt, and negative self-talk. Yours might be food, the phone, a boy or a girl, it could be the tv, or social media. It doesn't really matter but everyone has potential for there version of greatness but most people just let it slip right by them. Living a life of going through the motions. Too each their own, but that sounds like shit.</p>
 
-      <h2>Similique Sunt</h2>
+      <h2>My Commitment</h2>
 
-      <p>In culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+      <p><strong>On November 10th 2025, I commit to the following:</strong> No drinking in the house, nor on weekdays. No THC. No Drugs. No Nicotine. I will practive this for at lease 6 months and will report back with further entries through out this time period.</p>
 
-      <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+      <p>There is a root cause for my lack of discipline, and I believe there is a root cause for everyone's lack of discipline. People over complicate the root cause, but it's quite simple. Figure it out and cut it out.</p>
 
-      <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+      <p>And if this piece makes you think I'm an addict or turns you off about me, then that's ok, but I think it's shortsighted. Self-actualizing and realizing what's holding me back is, in my opinion, the beauty here. Taking my addictive nature, and targeting it at what gives me true long term joy is the direction this is pointed. It's like that classic quote that goes something like "the pain of staying the same, outweighs the pain of making a change" and you can just decide to make a change. Just do it, have a feedback loop, make an adjustment, do it some more, rinse and repeat.</p>
+
+      <h2>What I Truly Love</h2>
+
+      <p>By sticking to doing what I say I'm not going to do above, it will allow me to do more of what I truly love, which includes: Daily physical fitness, daily reading, growing my book of business, building businesses, loving my fiance, dog, and family, surfing, being a good business partner, experiencing new hospitality environments - restaurants, events, hotels.</p>
     `,
-    reading_time: 4,
+    reading_time: 5,
     published: true,
     featured: true
   },
