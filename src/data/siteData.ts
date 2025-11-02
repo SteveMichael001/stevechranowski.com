@@ -3,6 +3,7 @@ import shindigProject from "@/assets/shindig-project.jpg";
 import shindigBanner2 from "@/assets/shindig-banner-2.jpg";
 import shindigBanner3 from "@/assets/shindig-banner-3.jpg";
 import shindigBanner4 from "@/assets/shindig-banner-4.jpg";
+import shindigIntentions from "@/assets/shindig-intentions.png";
 
 // Central CMS-editable content
 export const siteConfig = {
@@ -305,7 +306,7 @@ export const projects: Project[] = [
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",
-    images: [shindigProject, shindigBanner2, shindigBanner3, shindigBanner4],
+    images: [shindigProject, shindigBanner2, shindigBanner3, shindigBanner4, shindigIntentions],
     excerpt: "Launched a house music events and entertainment brand in San Diego with best friend, Hussain",
     link: "https://www.instagram.com/shindigusa/",
     featured: true,
