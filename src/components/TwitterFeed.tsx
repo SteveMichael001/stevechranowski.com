@@ -1,19 +1,69 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const TwitterFeed = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
   useEffect(() => {
+    // Check if script already exists
+    const existingScript = document.getElementById('twitter-widget-script');
+
+    if (existingScript) {
+      // Script already loaded, just reload widgets
+      if (window.twttr?.widgets) {
+        window.twttr.widgets.load();
+        setIsLoading(false);
+      }
+      return;
+    }
+
     // Load Twitter widget script
     const script = document.createElement("script");
+    script.id = 'twitter-widget-script';
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
     script.charset = "utf-8";
+
+    script.onload = () => {
+      setIsLoading(false);
+      setError(false);
+    };
+
+    script.onerror = () => {
+      setIsLoading(false);
+      setError(true);
+      console.error("Failed to load Twitter widget script");
+    };
+
     document.body.appendChild(script);
 
-    return () => {
-      // Cleanup script on unmount
-      document.body.removeChild(script);
-    };
+    // Don't remove script on unmount - let it persist
   }, []);
+
+  if (error) {
+    return (
+      <section id="micro-updates" className="py-16 px-4 bg-muted/30">
+        <div className="w-full max-w-[1100px] mx-auto">
+          <h2 className="text-3xl md:text-4xl font-normal text-foreground mb-2">
+            Now
+          </h2>
+          <div className="bg-card p-6 rounded-lg border border-border text-center">
+            <p className="text-muted-foreground">
+              Unable to load Twitter feed. Visit{" "}
+              <a
+                href="https://twitter.com/stevemike_3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                @stevemike_3 on X/Twitter
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="micro-updates" className="py-16 px-4 bg-muted/30">
@@ -28,8 +78,15 @@ export const TwitterFeed = () => {
           Latest thoughts and updates from X/Twitter.
         </p>
 
+        {/* Loading State */}
+        {isLoading && (
+          <div className="bg-card p-8 rounded-lg border border-border text-center">
+            <p className="text-muted-foreground">Loading tweets...</p>
+          </div>
+        )}
+
         {/* Twitter Embedded Timeline */}
-        <div className="bg-card rounded-lg border border-border overflow-hidden">
+        <div className={`bg-card rounded-lg border border-border overflow-hidden ${isLoading ? 'hidden' : ''}`}>
           <a
             className="twitter-timeline"
             data-height="600"
