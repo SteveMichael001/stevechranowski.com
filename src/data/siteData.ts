@@ -176,51 +176,6 @@ export const blogPosts: BlogPost[] = [
     featured: true
   },
   {
-    id: "post-2",
-    title: "Building in Public: Why I'm Sharing Everything",
-    slug: "building-in-public",
-    date: "2025-09-28T14:00:00Z",
-    tags: ["business", "transparency", "learning"],
-    category: "Essays",
-    excerpt: "Most entrepreneurs hide their process. I'm doing the opposite. Here's why documenting the messy middle might be the smartest thing I've ever done.",
-    body_html: `
-      <p class="drop-cap">I used to think that success meant keeping your cards close to your chest. Don't show your hand. Don't reveal your strategy. Don't let anyone see you struggle.</p>
-
-      <p>But somewhere along the way, I realized that hiding the process was costing me more than protecting it. So I made a decision: build everything in public. Share the wins, the losses, the pivots, and the boring stuff in between.</p>
-
-      <h2>The Fear of Being Judged</h2>
-
-      <p>The first time I posted about a failed project, I expected crickets—or worse, mockery. Instead, I got messages from strangers saying, "I needed to hear this." People connected with the honesty more than they ever connected with the polished highlight reel.</p>
-
-      <p>Building in public isn't about oversharing for attention. It's about creating a record of the journey. It's about helping someone who's three steps behind you. It's about accountability.</p>
-
-      <h2>What I've Learned So Far</h2>
-
-      <p><strong>Transparency builds trust faster than perfection.</strong> When you show your work—the messy prototypes, the late-night debugging sessions, the revenue numbers—people see you as real, not as a brand trying to sell them something.</p>
-
-      <p><strong>Feedback comes to those who ask publicly.</strong> I've gotten better product ideas from Twitter replies than from months of private brainstorming. When you build in public, your audience becomes your co-conspirator.</p>
-
-      <p><strong>Documentation is a gift to your future self.</strong> Every update I share is a breadcrumb for when I inevitably forget why I made a certain decision. Public updates force clarity.</p>
-
-      <h2>The Messy Middle is Where Growth Happens</h2>
-
-      <p>Most people only share the before and after. The dumpster fire apartment renovation photo next to the stunning finished kitchen. The "I was broke" story next to the "now I'm thriving" flex.</p>
-
-      <p>But the messy middle—the part where you're figuring it out in real time—that's where the magic is. That's where the lessons are. That's the part worth documenting.</p>
-
-      <p>So I'm sharing it all. The experiments. The setbacks. The small wins that don't look impressive but feel monumental. Because if I can help one person avoid a mistake I made, or inspire someone to start their own thing, then the vulnerability is worth it.</p>
-
-      <h2>What's Next</h2>
-
-      <p>I'm committing to weekly updates on whatever I'm building. No filter. No perfect lighting. Just the raw, unpolished journey of trying to create something from nothing.</p>
-
-      <p>If you're on a similar path, I'd love to hear from you. Let's build in public together.</p>
-    `,
-    reading_time: 3,
-    published: true,
-    featured: false
-  },
-  {
     id: "post-3",
     title: "The Great Rate Hike: How FedEx & UPS Price Increases Gut Your Shipping Budget",
     slug: "carrier-pricing-reality-check",
