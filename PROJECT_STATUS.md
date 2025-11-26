@@ -1,8 +1,9 @@
 # Project Status & Progress Log
 
-**Last Updated:** November 1, 2025
+**Last Updated:** November 24, 2025
 **Project:** notebook-hub-stream (Personal Website)
 **Owner:** Steve Chranowski
+**Domain:** stevechranowski.com (registered on Cloudflare)
 
 ---
 
@@ -53,6 +54,45 @@ Personal website/blog built with React + TypeScript + Vite, deployed on Vercel w
 - ✅ Successfully deployed to production
 - ✅ Set up automatic deployments on git push
 
+### 7. YouTube Bento Box Integration (November 23-24, 2025)
+- ✅ Investigated version sync across Local/GitHub/Vercel/Lovable platforms
+- ✅ Attempted Twitter feed integration (pivoted due to account limitations)
+- ✅ **YouTube Data API v3 Setup:**
+  - Created Google Cloud project "Personal Website"
+  - Generated API key: Secured in environment variables
+  - Enabled YouTube Data API v3
+  - Learned OAuth vs API keys (educational deep-dive)
+- ✅ **Built YouTubeFeed Component:**
+  - Fetches playlist items via YouTube Data API
+  - Displays 3 equal-sized video cards in bento box layout
+  - Horizontal scroll for additional videos
+  - Hover effects with play button overlays
+  - Auto-updates when playlist changes (on page load)
+  - Loading and error states with fallbacks
+- ✅ **Security Implementation:**
+  - API key stored in `.env` file (local)
+  - Added `.env` to `.gitignore`
+  - Configured `VITE_YOUTUBE_API_KEY` in Vercel environment variables
+  - All environments (Production, Preview, Development)
+- ✅ **Playlist:** `PLFRRQCWz9XkBc-oeOwBak5NulA0wpXt1y`
+- ✅ Deployed to production with full functionality
+
+### 8. Content Cleanup
+- ✅ Removed "Building in Public" blog post from siteData.ts
+- ✅ Now showing 2 blog posts: "An Ode to Discipline" & "The Great Rate Hike"
+
+### 9. Domain Registration & Setup
+- ✅ **Domain Search:** Launched agent to find available domains
+  - Target: steve.com, stevemichael.com, stevechranowski.com
+  - Researched alternatives across multiple TLDs
+  - Compared pricing at Cloudflare, Porkbun, Namecheap
+- ✅ **Domain Registered:** stevechranowski.com
+  - **Registrar:** Cloudflare
+  - **Cost:** $10.62/year (transparent pricing, same renewal)
+  - **Features:** Auto-renew enabled, WHOIS privacy included
+  - **Status:** Purchased, awaiting DNS configuration
+- ⏳ **Next:** Connect domain to Vercel (pending)
+
 ---
 
 ## 🔧 Technical Details
@@ -64,12 +104,16 @@ Personal website/blog built with React + TypeScript + Vite, deployed on Vercel w
 - **Styling:** Tailwind CSS + shadcn/ui components
 - **Package Manager:** npm
 - **Deployment:** Vercel (automatic deployment from GitHub)
+- **APIs:** YouTube Data API v3
+- **Domain:** Cloudflare DNS + Registration
 
 ### Key Files & Locations
 - **Content Data:** `src/data/siteData.ts` (all blog posts, micro-updates, projects, social links)
-- **Components:** `src/components/` (Header, Footer, Contact, MicroUpdates, etc.)
+- **Components:** `src/components/` (Header, Footer, Contact, YouTubeFeed, etc.)
 - **Main Entry:** `src/main.tsx` → `src/App.tsx` → `src/pages/Index.tsx`
 - **Routing:** React Router (/, /blog/:slug, /404)
+- **Environment:** `.env` (API keys, excluded from Git)
+- **TypeScript Types:** `src/vite-env.d.ts` (window extensions, API types)
 
 ### Dependency Issue Fixed
 **Problem:** npm ERESOLVE conflict between date-fns@4.1.0 and react-day-picker@8.10.1
@@ -108,16 +152,16 @@ Personal website/blog built with React + TypeScript + Vite, deployed on Vercel w
 ## 📝 Recent Commits (Latest First)
 
 ```
+a1fb2f5 - Remove 'Building in Public' blog post
+2f47e97 - Add YouTube bento box with API integration
+2a294b3 - Replace Twitter feed with YouTube playlist embed
+59a9906 - Fix Twitter feed loading and error handling
+b793cac - Replace MicroUpdates with TwitterFeed component
+2132ea6 - Add comprehensive project status and progress documentation
+41c3ffb - Fix: Replace Shindig Productions image
+ccc1d74 - Add event image to projects
 27b26a1 - Update blog post dates
 d47112e - Update featured post content
-f176994 - Update blog post title
-5e22df1 - Fix LinkedIn handle - add missing 'n' in stevenchranowski
-c41c45e - Fix Instagram handle to stevemichael.001
-c9e309f - Force Vercel redeploy - clear cache
-250ca7d - Update email to stevenchranowski3@gmail.com everywhere
-f6e6788 - Fix social media URLs - add www. subdomain
-d851ffc - Fix date-fns version for Vercel deployment
-0daa6ad - Add 2 new blog posts and simplify footer
 ```
 
 ---
@@ -147,14 +191,13 @@ d851ffc - Fix date-fns version for Vercel deployment
 
 ## 📋 TODO / Next Steps
 
-### Optional (User Decision Needed)
-- [ ] **Buy custom domain** - stevechranowski.com
-  - Recommended registrar: Cloudflare ($9.77/year)
-  - Alternative: Porkbun, Namecheap
-- [ ] **Connect domain to Vercel** (after purchase)
+### High Priority (In Progress)
+- ⏳ **Connect stevechranowski.com to Vercel**
   - Add domain in Vercel dashboard
-  - Update DNS records at registrar
-  - Configure SSL (automatic with Vercel)
+  - Get DNS records from Vercel
+  - Configure A and CNAME records in Cloudflare
+  - Verify DNS propagation
+  - SSL will be automatic via Vercel
 
 ### Content Improvements (Future)
 - [ ] Add more blog posts with real content
@@ -184,10 +227,10 @@ Home Page (/)
 ├── About Section
 ├── Writing Section (Blog Posts)
 │   ├── Featured: "An Ode to Discipline"
-│   ├── "Building in Public"
 │   └── "The Great Rate Hike"
-├── Micro Updates Section
 ├── Projects Section (Shindig Productions)
+├── Now Watching Section (YouTube Bento Box)
+│   └── 3-5 videos from playlist, horizontally scrollable
 ├── Contact Section (Demo mode)
 └── Footer (Navigate + Connect)
 ```
@@ -214,10 +257,12 @@ Home Page (/)
 - `src/components/Header.tsx` - Navigation header
 - `src/components/Footer.tsx` - Footer with links
 - `src/components/Contact.tsx` - Contact form (demo mode)
-- `src/components/MicroUpdates.tsx` - Micro updates list
+- `src/components/YouTubeFeed.tsx` - **YouTube playlist bento box with API integration**
 - `src/components/Hero.tsx` - Hero section
 - `src/components/About.tsx` - About section
 - `src/components/Writing.tsx` - Blog posts grid
+- `src/components/BlogIndex.tsx` - Blog listing component
+- `src/components/Projects.tsx` - Projects showcase
 
 ---
 
@@ -308,6 +353,31 @@ git push origin main        # Deploy to production
 
 ---
 
-**Last Session:** Successfully synced all content updates from Lovable, fixed all social links, and deployed to production.
+## 📚 Learning Sessions
 
-**Status:** ✅ Site is live and fully functional. Optional domain purchase pending user decision.
+### Session 1: OAuth vs API Keys (November 23, 2025)
+**Topic:** Understanding the difference between OAuth and API keys
+**Method:** Baby-step teaching approach
+**Concepts Covered:**
+- Hotel key analogy (API Key = master key, OAuth = check-in process)
+- When to use each authentication method
+- Real-world example: FedEx API (OAuth for client authorization)
+- YouTube API (simple API key for public data)
+
+**Key Takeaway:** OAuth is for accessing private data on behalf of users. API keys are for accessing public data or making requests as yourself.
+
+---
+
+**Last Session (November 23-24, 2025):**
+- ✅ Investigated and synced all versions across platforms
+- ✅ Built YouTube bento box with API integration
+- ✅ Set up Google Cloud API credentials and learned OAuth fundamentals
+- ✅ Configured secure environment variables across Local/Vercel
+- ✅ Removed outdated blog content
+- ✅ Registered stevechranowski.com domain on Cloudflare
+- ⏳ Next: Connect domain to Vercel
+
+**Current Status:**
+✅ Site is live and fully functional with YouTube integration
+✅ Domain purchased (stevechranowski.com)
+⏳ DNS configuration pending
