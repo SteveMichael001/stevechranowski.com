@@ -129,49 +129,88 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "post-1",
-    title: "An Ode to Discipline",
-    slug: "ode-to-discipline",
-    date: "2025-11-01T10:00:00Z",
-    tags: ["personal", "discipline", "growth"],
+    title: "The Life I'd Like to Lead",
+    slug: "the-life-id-like-to-lead",
+    date: "2026-01-14T10:00:00Z",
+    tags: ["personal", "potential", "goals", "growth"],
     category: "Essays",
-    excerpt: "The worst pains in life come from lack of discipline. The greatest pains in life come from strength in persistence.",
+    excerpt: "The idea of potential has been on my mind. My grandfather seared it into my brain. I've always believed I had the greatest potential in my generation of the family—now it's time to execute.",
     featured_image: loremIpsumFeature,
     body_html: `
-      <p class="drop-cap">The worst pains in life come from lack of discipline. The greatest pains in life come from strength in persistence.</p>
-      
-      <p>I was 11 years old, sitting in the nook of our home in front of my parents. I hated running at the time, I really didn't enjoy a ton of physical excursion in general. Don't get me wrong, our father made sure we were three sport athletes but it wasn't my strongest interest.</p>
+      <p class="drop-cap">The life I'd like to lead (the selfish, non-virtuous version)…</p>
 
-      <p>So it was something as simple as pulling my parents for a chat and telling them I didn't want to continue playing travel soccer… in the middle of the season. There was something excruciatingly painful when I brought myself to do it, not exactly sure why, but looking back I think it was because I knew I was letting myself down.</p>
+      <p>The purpose of writing this is not to puff my chest, and it's not really for others—but I do want to get comfortable publishing content, so here goes…</p>
 
-      <p>I put on my biggest pouty face - I wasn't afraid to pull crying jags. I also made sure the reason for quitting was not about my distaste for cardio - that wasn't going to move the needle. It was because I was no longer interested in the game, my time would be better spent on my studies or a different sport. Learned at a young age that we had to strategically plan these conversations to get what we wanted, at least that's what my brother and I told ourselves.</p>
+      <h2>Potential</h2>
 
-      <p>My parents folded. I won.</p>
+      <p>The idea of potential has been on my mind. My grandfather seared it into my brain. He'd say something along the lines of, "You all have very high potential, but it's your call on what you do with it." I thought about it more a couple of years ago when he passed. I could bullshit reasons as to why, but I've always believed I had the greatest potential in my generation of the family. Nothing against the others—I wouldn't be surprised if they felt the same about themselves.</p>
 
-      <h2>The Slippery Slope</h2>
+      <p>I still believe this to be true, but I think I've done a pseudo shit job of executing on that potential.</p>
 
-      <p>When I think of discipline, I'm constantly reminded of this memory. It kicked off a string of accepting mediocrity, which I now soley blame on my lack of self-discipline. My father was a creature of competition; I rebelled by being lax. It was the "cool" thing to do. I started making more and more decisions to be "cool" instead of being myself, and at that time, I had no understanding of long-term consequences. I became more focused on short-term pleasure while leveraging my natural-born gifts to get me by.</p>
+      <p>Where are my millions? Where is my big family home and my vacation homes? Where is my business? Don't get me wrong—I am grateful, and my life is pretty darn good. But straight up: I'm tired of being the guy in the family who is supposed to afford us all the luxuries and take us to the next level, yet I'm not taking swift, consistent action to get us there.</p>
 
-      <p>Everything would be just fine…Well, everything has been fine, everything has been more than fine, but I wasn't put on this planet to be ordinary. You know how the next line goes…I want to be extraordinary and in order to do so I want to be in an endless pursuit of discipline. I know it's possible - I've done it for short stints and never feel better, but I always come creeping back for shorter and shorter periods. Progress but not there yet.</p>
+      <h2>It's Not All About the Money (But Some of It Is)</h2>
 
-      <h2>What Holds Me Back</h2>
+      <p>Let me be clear—this is not all about the money. But I've always wanted to run my own business. I want a life of adventure. I am a daydreamer. And yes, some of it's about the money.</p>
 
-      <p>When I think about what personally prevents me from being my best self, a disciplined being who does what he says he is going to do, who does what he truly loves, I can list the items immediately…</p>
+      <p>I've built a solid foundation of skills over the last 29 years to run a business well and live an adventurous life—if I simply decide to execute every day. Running businesses and living a more adventurous life is the next step in my potential. Giving it 100% and doing those things well can lead to the millions, the family homes, and all the ego virtue signaling, lol.</p>
 
-      <p>The ironic part is the items that I superficially enjoy, the short-term, immediate dopamine rushes are what hold me back - the drinking, smoking, sexual fixations, drugs. Mine might sound more vulgar than yours, but we all have this list and we tell ourselves over and over that we'll stop and then we just continue the roller coaster. Immediate high followed by a rush of regret, self-doubt, and negative self-talk. Yours might be food, the phone, a boy or a girl, it could be the tv, or social media. It doesn't really matter but everyone has potential for there version of greatness but most people just let it slip right by them. Living a life of going through the motions. Too each their own, but that sounds like shit.</p>
+      <h2>The Daydream</h2>
 
-      <h2>My Commitment</h2>
+      <p>Here is what I daydream about when I see my future life—the life I'd like to lead:</p>
 
-      <p><strong>On November 10th 2025, I commit to the following:</strong> No drinking in the house, nor on weekdays. No THC. No Drugs. No Nicotine. I will practive this for at lease 6 months and will report back with further entries through out this time period.</p>
+      <ul>
+        <li>I work with others that I am inspired by</li>
+        <li>I constantly learn and grow</li>
+        <li>I produce way, way more than I consume—whether that's writing, creating content, working on a project, a deal, a system, or a business. Production and action are the key metrics.</li>
+        <li>I interview people selfishly to gain access to what they do because I am curious, but I share it with the world as leverage to gain access to more interviews and to broaden my reach</li>
+        <li>I run multiple businesses</li>
+        <li>I create and operate hospitality businesses so we can travel for "work"</li>
+        <li>I do real estate deals</li>
+        <li>I own hard assets that generate recurring revenue</li>
+        <li>I network with interesting and powerful people</li>
+        <li>My city "knows" me and my family</li>
+        <li>I positively impact thousands of people's lives every year</li>
+        <li>People know that I am a man of my word and that I am trustworthy</li>
+        <li>I have a beautiful wife, Keirstyn, and many children</li>
+        <li>I employ friends and family</li>
+        <li>I build unique communities for our families and friends</li>
+        <li>I do LOTS and LOTS of deals in all shapes and sizes, but over time those deals grow and grow, and the efforts snowball</li>
+        <li>I take lots of mini adventures</li>
+        <li>I am a specimen of peak performance, wellness, and health</li>
+        <li>I don't allow drugs to consume me or knock me off the pathway</li>
+        <li>Work is play and play is work</li>
+        <li>I "work" 7 days a week</li>
+        <li>We have four personal properties for friends and family—one at the Jersey Shore or NYC, one in SoCal, one in NorCal or the mountains, and one in Mexico</li>
+        <li>I do deep focused work for 2-3 hours a day</li>
+        <li>I surf the world</li>
+        <li>Porsches are my daily driver</li>
+        <li>I'm obsessive</li>
+        <li>I simply do what I'm interested in doing</li>
+        <li>I have flexibility to homeschool my children</li>
+      </ul>
 
-      <p>There is a root cause for my lack of discipline, and I believe there is a root cause for everyone's lack of discipline. People over complicate the root cause, but it's quite simple. Figure it out and cut it out.</p>
+      <p>Some of the above relates more directly to my potential. Some are outcomes of acting on that potential. And all of them are consequences of consistent and quality inputs. Am I doing what I say I'm going to do? Am I embracing serendipity? Am I generating good luck and fortune by putting myself out there? Am I proud of what I am doing?</p>
 
-      <p>And if this piece makes you think I'm an addict or turns you off about me, then that's ok, but I think it's shortsighted. Self-actualizing and realizing what's holding me back is, in my opinion, the beauty here. Taking my addictive nature, and targeting it at what gives me true long term joy is the direction this is pointed. It's like that classic quote that goes something like "the pain of staying the same, outweighs the pain of making a change" and you can just decide to make a change. Just do it, have a feedback loop, make an adjustment, do it some more, rinse and repeat.</p>
+      <h2>First Principles</h2>
 
-      <h2>What I Truly Love</h2>
+      <p>What first-principle steps and inputs do I need to take NOW to live the life I truly want to lead? This isn't some formula or learning lesson for others—just what my gut is telling me is appropriate at this very moment:</p>
 
-      <p>By sticking to doing what I say I'm not going to do above, it will allow me to do more of what I truly love, which includes: Daily physical fitness, daily reading, growing my book of business, building businesses, loving my fiance, dog, and family, surfing, being a good business partner, experiencing new hospitality environments - restaurants, events, hotels.</p>
+      <ol>
+        <li><strong>Business every day:</strong> I will work on a business idea and business deals every day that can be tied to a million-dollar metric by the end of 2026—whether that's value, revenue, profit, or otherwise.</li>
+        <li><strong>Physical excellence:</strong> I will eat clean and be physically active 6 days a week.</li>
+        <li><strong>Vices don't control me:</strong> Vices are saved for special occasions or to truly enhance an experience. If vices prevent actions 1 and 2, I must stop immediately for a season of clarity. No booze in January to kick off 2026. Push for 90 days. Eliminate nicotine for good. A long T-break is a must.</li>
+      </ol>
+
+      <h2>The Reminder</h2>
+
+      <p>I think it's important that I re-read this as much as possible this year. It serves as a healthy reminder to do what I say I am going to do. Build the habits. Do the boring actions. Keep your head down. I can just do things, remember?</p>
+
+      <p>That's the beautiful thing about potential and leading a beautiful life—it's pretty much boundless by everything other than time. My discomfort with the status quo is much, much greater than the comfort of staying the same, so let's stop wasting time.</p>
+
+      <p><em>Yours truly,<br/>Steve Chranowski</em></p>
     `,
-    reading_time: 5,
+    reading_time: 6,
     published: true,
     featured: true
   },
