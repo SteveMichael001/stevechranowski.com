@@ -218,10 +218,10 @@ export const blogPosts: BlogPost[] = [
     slug: "carrier-pricing-reality-check",
     date: "2025-11-01T09:30:00Z",
     tags: ["logistics", "business", "shipping"],
-    category: "Essays",
+    category: "Research",
     excerpt: "As a parcel shipping advisor, I've watched FedEx and UPS crank up U.S. domestic rates every year from 2022 through 2025. Despite their PR about 'enhancing service,' these hikes are hammering your margins.",
     body_html: `
-      <p class="drop-cap">As a parcel shipping advisor, I've watched FedEx and UPS crank up U.S. domestic rates every year from 2022 through 2025. Despite their PR about "enhancing service," these hikes – on base rates, fuel surcharges, and endless fees – are hammering your margins and driving up costs for you and your customers. Below is a no-nonsense look at what's really happening to your shipping costs and why it's bad for business.</p>
+      <p class="drop-cap">As a parcel shipping advisor, I've watched FedEx and UPS crank up U.S. domestic rates every year from 2022 through 2025. Despite their PR about "enhancing service," these hikes on base rates, fuel surcharges, and endless fees are hammering your margins and driving up costs for you and your customers. Below is a no-nonsense look at what's really happening to your shipping costs and why it's bad for business.</p>
 
       <h2>What This Means for Your Business</h2>
 
@@ -239,7 +239,7 @@ export const blogPosts: BlogPost[] = [
 
       <ul>
         <li><strong>2022:</strong> +5.9% average GRI</li>
-        <li><strong>2023:</strong> +6.9% — the steepest in over a decade</li>
+        <li><strong>2023:</strong> +6.9%, the steepest in over a decade</li>
         <li><strong>2024:</strong> +5.9%</li>
         <li><strong>2025:</strong> +5.9% (FedEx already confirmed)</li>
       </ul>
@@ -248,7 +248,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Surcharges and "Fee Creep": The Silent Profit Killers</h2>
 
-      <p><strong>Fuel Surcharges – Quiet Climbs:</strong> Between 2024 and 2025, FedEx and UPS each raised their fuel surcharge tables multiple times. By mid-2025, UPS Ground fuel surcharges climbed from ~15% to over 19%, and FedEx hit 20.5%, despite falling diesel costs. A 4 percentage point increase in the fuel surcharge can quietly add over $2,400 in shipping costs per year for a business spending $5,000 per month on shipping.</p>
+      <p><strong>Fuel Surcharges, Quiet Climbs:</strong> Between 2024 and 2025, FedEx and UPS each raised their fuel surcharge tables multiple times. By mid-2025, UPS Ground fuel surcharges climbed from ~15% to over 19%, and FedEx hit 20.5%, despite falling diesel costs. A 4 percentage-point increase in the fuel surcharge can quietly add over $2,400 in annual shipping costs for a business spending $5,000 per month.</p>
 
       <h2>Current Shipping Fees and Strategies</h2>
 
@@ -267,13 +267,13 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Higher Prices, Less Service</h2>
 
-      <p><strong>FedEx Network Consolidation:</strong> Shut down 100+ Ground and Express stations, ended Sunday delivery in many ZIPs, and removed service from several FedEx Office locations. All part of a cost-cutting initiative — with no price breaks for you.</p>
+      <p><strong>FedEx Network Consolidation:</strong> Shut down 100+ Ground and Express stations, ended Sunday delivery in many ZIPs, and removed service from several FedEx Office locations. All part of a cost-cutting initiative, with no price breaks for you.</p>
 
-      <p><strong>UPS: Revenue Over Volume:</strong> Focused on high-margin shipments. Their "Better not Bigger" strategy is about maximizing revenue per piece — not growing total volume. For many shippers with ~$5–50K monthly spend, this translated into effective rate inflation without access to enterprise-tier pricing support.</p>
+      <p><strong>UPS: Revenue Over Volume:</strong> Focused on high-margin shipments. Their "Better, Not Bigger" strategy is about maximizing revenue per piece, not growing total volume. For many shippers with $5K–$50K in monthly spend, this translated into effective rate inflation without access to enterprise-tier pricing support.</p>
 
       <h2>Bottom Line</h2>
 
-      <p>If you ship heavier, larger, or time-sensitive parcels, you've been hit hardest — not just by rate hikes, but by aggressive fee layering. The carriers are optimizing for their shareholders, not your business. Understanding these changes is the first step to fighting back.</p>
+      <p>If you ship heavier, larger, or time-sensitive parcels, you've been hit hardest, not just by rate hikes, but by aggressive fee layering. The carriers are optimizing for their shareholders, not your business. Understanding these changes is the first step to fighting back.</p>
     `,
     reading_time: 6,
     published: true,
