@@ -298,6 +298,7 @@ export const projects: Project[] = [
     id: "proj-3",
     title: "RVO",
     slug: "rvo",
+    image: "/rvo-screenshot.png",
     excerpt: "Automated shipping invoice audit platform. Upload your FedEx or UPS invoice, we find savings.",
     link: "https://shiprvo.com",
     featured: true,
