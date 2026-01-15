@@ -20,10 +20,10 @@ export const Projects = () => {
                 {project.images && project.images.length > 0 ? (
                   <ProjectCarousel images={project.images} title={project.title} />
                 ) : project.image ? (
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-black"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
