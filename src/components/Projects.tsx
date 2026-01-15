@@ -4,7 +4,7 @@ import { ProjectCarousel } from "./ProjectCarousel";
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-muted/30">
+    <section id="projects" className="py-24 px-4 bg-muted/30">
       <div className="w-full max-w-[1100px] mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal mb-2 text-foreground">
           Projects

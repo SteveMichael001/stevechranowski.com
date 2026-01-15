@@ -4,7 +4,7 @@ import portraitImage from "@/assets/portrait.png";
 
 export const Hero = () => {
   return (
-    <section className="min-h-[85vh] flex items-center justify-center px-4 py-20 pb-8 pt-32">
+    <section className="min-h-[90vh] flex items-center justify-center px-4 pt-28 pb-16">
       <div className="w-full max-w-[1100px] grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Text */}
         <div className="space-y-6">

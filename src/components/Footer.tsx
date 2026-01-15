@@ -2,7 +2,7 @@ import { siteConfig } from "@/data/siteData";
 
 export const Footer = () => {
   return (
-    <footer className="py-12 px-4 border-t border-border">
+    <footer className="py-16 px-4 border-t border-border">
       <div className="w-full max-w-[1100px] mx-auto">
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           {/* Navigate Section */}

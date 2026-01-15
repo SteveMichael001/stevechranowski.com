@@ -2,7 +2,7 @@ import { siteConfig } from "@/data/siteData";
 
 export const About = () => {
   return (
-    <section id="about" className="pt-8 pb-20 px-4">
+    <section id="about" className="py-24 px-4">
       <div className="w-full max-w-[780px] mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal mb-8 text-foreground">
           Who I am

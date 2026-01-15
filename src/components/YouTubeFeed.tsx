@@ -56,7 +56,7 @@ export const YouTubeFeed = () => {
 
   if (loading) {
     return (
-      <section id="youtube-feed" className="py-16 px-4 bg-muted/30">
+      <section id="youtube-feed" className="py-24 px-4">
         <div className="w-full max-w-[1100px] mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-foreground mb-2">
             Now Watching
@@ -74,7 +74,7 @@ export const YouTubeFeed = () => {
 
   if (error || videos.length === 0) {
     return (
-      <section id="youtube-feed" className="py-16 px-4 bg-muted/30">
+      <section id="youtube-feed" className="py-24 px-4">
         <div className="w-full max-w-[1100px] mx-auto">
           <h2 className="text-3xl md:text-4xl font-normal text-foreground mb-2">
             Now Watching
@@ -101,7 +101,7 @@ export const YouTubeFeed = () => {
   }
 
   return (
-    <section id="youtube-feed" className="py-16 px-4 bg-muted/30">
+    <section id="youtube-feed" className="py-24 px-4">
       <div className="w-full max-w-[1100px] mx-auto">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-3xl md:text-4xl font-normal text-foreground">

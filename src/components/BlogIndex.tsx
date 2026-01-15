@@ -13,7 +13,7 @@ export const BlogIndex = () => {
   const recentPosts = publishedPosts.filter(p => !p.featured).slice(0, 5);
 
   return (
-    <section id="writing" className="py-20 px-4">
+    <section id="writing" className="py-24 px-4">
       <div className="w-full max-w-[1100px] mx-auto">
         <h2 className="text-3xl md:text-4xl font-normal mb-2 text-foreground">
           Writing
