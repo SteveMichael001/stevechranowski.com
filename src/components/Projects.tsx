@@ -30,9 +30,11 @@ export const Projects = () => {
                     <span className="text-sm">Project image</span>
                   </div>
                 )}
-                {project.featured && (
-                  <div className="absolute top-3 right-3 bg-foreground text-background text-xs px-2 py-1 rounded z-10">
-                    Featured
+                {project.tags.includes("in progress") && (
+                  <div className="absolute top-0 left-0 w-32 h-32 overflow-hidden z-10">
+                    <div className="absolute top-6 -left-8 w-40 bg-yellow-400 text-black text-xs font-bold py-1 text-center transform -rotate-45 shadow-md">
+                      IN PROGRESS
+                    </div>
                   </div>
                 )}
               </div>
