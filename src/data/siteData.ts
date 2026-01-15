@@ -295,6 +295,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "proj-3",
+    title: "ShipRVO",
+    slug: "shiprvo",
+    excerpt: "Automated shipping invoice audit platform. Upload your FedEx or UPS invoice, we find the overcharges.",
+    link: "https://shiprvo.com",
+    featured: true,
+    tags: ["SaaS", "logistics", "in progress"]
+  },
+  {
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",

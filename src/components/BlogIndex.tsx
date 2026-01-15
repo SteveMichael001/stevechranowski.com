@@ -19,7 +19,7 @@ export const BlogIndex = () => {
           Writing
         </h2>
         <p className="text-muted-foreground mb-12">
-          Essays, notes, and experiments. The long form.
+          Essays, Notes, Profiles, Research
         </p>
 
         {/* Featured Post */}
