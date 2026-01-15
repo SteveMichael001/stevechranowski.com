@@ -43,7 +43,7 @@ export const Header = () => {
             </Button>
             <Button
               variant="ghost"
-              onClick={() => scrollToSection('#blog')}
+              onClick={() => scrollToSection('#writing')}
               className="justify-start text-lg"
             >
               Blog
