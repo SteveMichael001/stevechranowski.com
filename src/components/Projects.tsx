@@ -39,17 +39,23 @@ export const Projects = () => {
                 )}
               </div>
               <div className="p-6 flex-grow flex flex-col">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start justify-between mb-2 hover:text-muted-foreground transition-colors"
-                >
-                  <h3 className="text-xl font-normal text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start justify-between mb-2 hover:text-muted-foreground transition-colors"
+                  >
+                    <h3 className="text-xl font-normal text-foreground group-hover:text-muted-foreground group-hover:underline transition-colors">
+                      {project.title}
+                    </h3>
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-muted-foreground transition-colors flex-shrink-0 ml-2" />
+                  </a>
+                ) : (
+                  <h3 className="text-xl font-normal text-foreground mb-2">
                     {project.title}
                   </h3>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-muted-foreground transition-colors flex-shrink-0 ml-2" />
-                </a>
+                )}
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                   {project.excerpt}
                 </p>
