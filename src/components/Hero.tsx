@@ -13,20 +13,12 @@ export const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: siteConfig.hero_subhead }} />
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button 
+            <Button
               size="lg"
               onClick={() => document.querySelector(siteConfig.hero_cta1_anchor)?.scrollIntoView({ behavior: 'smooth' })}
               className="text-base"
             >
               {siteConfig.hero_cta1_text}
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => document.querySelector(siteConfig.hero_cta2_anchor)?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-base"
-            >
-              {siteConfig.hero_cta2_text}
             </Button>
           </div>
         </div>
