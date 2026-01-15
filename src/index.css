@@ -108,6 +108,23 @@ All colors MUST be HSL.
     @apply rounded-lg my-8 w-full;
   }
 
+  .prose-reading ul,
+  .prose-reading ol {
+    @apply my-6 pl-6 space-y-3;
+  }
+
+  .prose-reading ul {
+    @apply list-disc;
+  }
+
+  .prose-reading ol {
+    @apply list-decimal;
+  }
+
+  .prose-reading li {
+    @apply text-base md:text-lg leading-relaxed pl-2;
+  }
+
   /* Drop cap for featured posts */
   .drop-cap::first-letter {
     @apply float-left text-6xl md:text-7xl leading-none mr-2 mt-1;

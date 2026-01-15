@@ -139,30 +139,30 @@ export const blogPosts: BlogPost[] = [
     body_html: `
       <p class="drop-cap">The life I'd like to lead (the selfish, non-virtuous version)…</p>
 
-      <p>The purpose of writing this is not to puff my chest, and it's not really for others—but I do want to get comfortable publishing content, so here goes…</p>
+      <p>The purpose of writing this is not to puff my chest, and it's not really for others, but I do want to get comfortable publishing content, so here goes…</p>
 
       <h2>Potential</h2>
 
-      <p>The idea of potential has been on my mind. My grandfather seared it into my brain. He'd say something along the lines of, "You all have very high potential, but it's your call on what you do with it." I thought about it more a couple of years ago when he passed. I could bullshit reasons as to why, but I've always believed I had the greatest potential in my generation of the family. Nothing against the others—I wouldn't be surprised if they felt the same about themselves.</p>
+      <p>The idea of potential has been on my mind. My grandfather seared it into my brain. He'd say something along the lines of, "You all have very high potential, but it's your call on what you do with it." I thought about it more a couple of years ago when he passed. I could bullshit reasons as to why, but I've always believed I had the greatest potential in my generation of the family. Nothing against the others. I wouldn't be surprised if they feel the same way about me.</p>
 
       <p>I still believe this to be true, but I think I've done a pseudo shit job of executing on that potential.</p>
 
-      <p>Where are my millions? Where is my big family home and my vacation homes? Where is my business? Don't get me wrong—I am grateful, and my life is pretty darn good. But straight up: I'm tired of being the guy in the family who is supposed to afford us all the luxuries and take us to the next level, yet I'm not taking swift, consistent action to get us there.</p>
+      <p>Where are my millions? Where is my big family home and my vacation homes? Where is my business? Don't get me wrong, I am grateful, and my life is pretty darn good. But straight up: I'm tired of being the guy in the family who is supposed to afford us all the luxuries and take us to the next level, yet I'm not taking swift, consistent action to get us there.</p>
 
       <h2>It's Not All About the Money (But Some of It Is)</h2>
 
-      <p>Let me be clear—this is not all about the money. But I've always wanted to run my own business. I want a life of adventure. I am a daydreamer. And yes, some of it's about the money.</p>
+      <p>Let me be clear: this is not all about the money. But I've always wanted to run my own business. I want a life of adventure. I am a daydreamer. And yes, some of it's about the money.</p>
 
-      <p>I've built a solid foundation of skills over the last 29 years to run a business well and live an adventurous life—if I simply decide to execute every day. Running businesses and living a more adventurous life is the next step in my potential. Giving it 100% and doing those things well can lead to the millions, the family homes, and all the ego virtue signaling, lol.</p>
+      <p>I've built a solid foundation of skills over the last 29 years to run a business well and live an adventurous life if I simply decide to execute every day. Running businesses and living a more adventurous life is the next step in my potential. Giving it 100% and doing those things well can lead to the millions, the family homes, and all the ego virtue signaling, lol.</p>
 
       <h2>The Daydream</h2>
 
-      <p>Here is what I daydream about when I see my future life—the life I'd like to lead:</p>
+      <p>Here is what I daydream about when I see my future life, the life I'd like to lead:</p>
 
       <ul>
         <li>I work with others that I am inspired by</li>
         <li>I constantly learn and grow</li>
-        <li>I produce way, way more than I consume—whether that's writing, creating content, working on a project, a deal, a system, or a business. Production and action are the key metrics.</li>
+        <li>I produce way, way more than I consume, whether that's writing, creating content, working on a project, a deal, a system, or a business. Production and action are the key metrics.</li>
         <li>I interview people selfishly to gain access to what they do because I am curious, but I share it with the world as leverage to gain access to more interviews and to broaden my reach</li>
         <li>I run multiple businesses</li>
         <li>I create and operate hospitality businesses so we can travel for "work"</li>
@@ -181,7 +181,7 @@ export const blogPosts: BlogPost[] = [
         <li>I don't allow drugs to consume me or knock me off the pathway</li>
         <li>Work is play and play is work</li>
         <li>I "work" 7 days a week</li>
-        <li>We have four personal properties for friends and family—one at the Jersey Shore or NYC, one in SoCal, one in NorCal or the mountains, and one in Mexico</li>
+        <li>We have four personal properties for friends and family: one at the Jersey Shore or NYC, one in SoCal, one in NorCal or the mountains, and one in Mexico</li>
         <li>I do deep focused work for 2-3 hours a day</li>
         <li>I surf the world</li>
         <li>Porsches are my daily driver</li>
@@ -194,10 +194,10 @@ export const blogPosts: BlogPost[] = [
 
       <h2>First Principles</h2>
 
-      <p>What first-principle steps and inputs do I need to take NOW to live the life I truly want to lead? This isn't some formula or learning lesson for others—just what my gut is telling me is appropriate at this very moment:</p>
+      <p>What first-principle steps and inputs do I need to take NOW to live the life I truly want to lead? This isn't some formula or learning lesson for others, just what my gut is telling me is appropriate at this very moment:</p>
 
       <ol>
-        <li><strong>Business every day:</strong> I will work on a business idea and business deals every day that can be tied to a million-dollar metric by the end of 2026—whether that's value, revenue, profit, or otherwise.</li>
+        <li><strong>Business every day:</strong> I will work on a business idea and business deals every day that can be tied to a million-dollar metric by the end of 2026, whether that's value, revenue, profit, or otherwise.</li>
         <li><strong>Physical excellence:</strong> I will eat clean and be physically active 6 days a week.</li>
         <li><strong>Vices don't control me:</strong> Vices are saved for special occasions or to truly enhance an experience. If vices prevent actions 1 and 2, I must stop immediately for a season of clarity. No booze in January to kick off 2026. Push for 90 days. Eliminate nicotine for good. A long T-break is a must.</li>
       </ol>
@@ -206,7 +206,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>I think it's important that I re-read this as much as possible this year. It serves as a healthy reminder to do what I say I am going to do. Build the habits. Do the boring actions. Keep your head down. I can just do things, remember?</p>
 
-      <p>That's the beautiful thing about potential and leading a beautiful life—it's pretty much boundless by everything other than time. My discomfort with the status quo is much, much greater than the comfort of staying the same, so let's stop wasting time.</p>
+      <p>That's the beautiful thing about potential and leading a beautiful life. It's pretty much boundless by everything other than time. My discomfort with the status quo is much, much greater than the comfort of staying the same, so let's stop wasting time.</p>
 
       <p><em>Yours truly,<br/>Steve Chranowski</em></p>
     `,
