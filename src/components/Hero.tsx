@@ -24,11 +24,11 @@ export const Hero = () => {
         </div>
 
         {/* Right: Portrait Image */}
-        <div className="relative aspect-square md:aspect-[4/5] rounded-lg overflow-hidden">
-          <img 
-            src={portraitImage} 
+        <div className="relative aspect-square md:aspect-square rounded-lg overflow-hidden max-h-[70vh]">
+          <img
+            src={portraitImage}
             alt="Steve Chranowski portrait"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
           />
         </div>
       </div>
