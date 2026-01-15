@@ -137,9 +137,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "The idea of potential has been on my mind. My grandfather seared it into my brain. I've always believed I had the greatest potential in my generation of the family—now it's time to execute.",
     featured_image: loremIpsumFeature,
     body_html: `
-      <p class="drop-cap">The life I'd like to lead (the selfish, non-virtuous version)…</p>
-
-      <p>The purpose of writing this is not to puff my chest, and it's not really for others, but I do want to get comfortable publishing content, so here goes…</p>
+      <p class="drop-cap">The life I'd like to lead (the selfish, non-virtuous version)… The purpose of writing this is not to puff my chest, and it's not really for others, but I do want to get comfortable publishing content, so here goes…</p>
 
       <h2>Potential</h2>
 
