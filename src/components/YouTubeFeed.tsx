@@ -122,7 +122,7 @@ export const YouTubeFeed = () => {
                 href={`https://www.youtube.com/watch?v=${video.videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-card rounded-lg border border-border overflow-hidden hover:border-accent transition-all duration-300 flex-shrink-0 w-[320px] md:w-[340px]"
+                className="group relative bg-card rounded-lg border border-border overflow-hidden hover:border-muted-foreground/50 transition-all duration-300 flex-shrink-0 w-[320px] md:w-[340px]"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
@@ -133,7 +133,7 @@ export const YouTubeFeed = () => {
                   />
                   {/* Play overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-accent/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-16 h-16 bg-foreground/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <svg
                         className="w-8 h-8 text-white ml-1"
                         fill="currentColor"
@@ -147,7 +147,7 @@ export const YouTubeFeed = () => {
 
                 {/* Video Info */}
                 <div className="p-4">
-                  <h3 className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-accent transition-colors">
+                  <h3 className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-muted-foreground transition-colors">
                     {video.title}
                   </h3>
                   <div className="mt-2 flex items-center gap-1 text-xs text-muted-foreground">
@@ -166,7 +166,7 @@ export const YouTubeFeed = () => {
             href={`https://www.youtube.com/playlist?list=${playlistId}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             View full playlist on YouTube
             <ExternalLink className="h-4 w-4" />
