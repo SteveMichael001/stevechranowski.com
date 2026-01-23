@@ -1,8 +1,17 @@
 # Steve Chranowski — Personal Hub & Blog
 
-A calm, minimalist personal website inspired by [wabi.ai](https://wabi.ai). Built with React, TypeScript, and Tailwind CSS.
+A calm, minimalist personal website. Built with React, TypeScript, and Tailwind CSS.
 
-**Live URL**: https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476
+**Live URL**: https://stevechranowski.com
+
+---
+
+## Hosting Stack
+
+- **Domain & DNS**: Cloudflare
+- **Hosting**: Vercel
+- **Source Control**: GitHub
+- **Development**: Lovable (visual editor) + Claude Code (AI pair programming)
 
 ---
 
@@ -12,11 +21,11 @@ A calm, minimalist personal website inspired by [wabi.ai](https://wabi.ai). Buil
 - ✅ **Micro-updates stream** (reverse-chron, Twitter/tumblelog style)
 - ✅ **Blog system** with featured posts, tags, reading time, clean reading layout
 - ✅ **Projects grid** (portfolio showcase)
+- ✅ **YouTube feed** (pulls latest videos from playlist)
 - ✅ **Events calendar** (upcoming/past)
-- ✅ **Contact form** (webhook-ready)
+- ✅ **Contact links** (email, social)
 - ✅ **SEO metadata** (Open Graph, Twitter cards)
 - ✅ **Mobile-first responsive design**
-- ✅ **Sample content** (6 posts, 8 micro-updates, 3 projects, 3 events)
 
 ---
 
@@ -146,22 +155,18 @@ Each blog post automatically includes:
 
 ---
 
-## Webhooks & Integrations
+## Environment Variables
 
-### Contact Form
+Required in `.env`:
 
-Set webhook URL in `siteData.ts`:
-
-```typescript
-contact_form_webhook_url: "https://your-webhook-url.com"
+```
+VITE_YOUTUBE_API_KEY=your_youtube_api_key
 ```
 
-### Analytics
-
-Add Google Analytics ID:
-
-```typescript
-ga_measurement_id: "G-XXXXXXXXXX"
+Optional (not currently used):
+```
+contact_form_webhook_url (set in siteData.ts if you want form submissions)
+ga_measurement_id (set in siteData.ts for Google Analytics)
 ```
 
 ---
@@ -169,20 +174,28 @@ ga_measurement_id: "G-XXXXXXXXXX"
 ## Publishing Workflow
 
 1. **Edit content** in `src/data/siteData.ts`
-2. **Preview changes** in Lovable (auto-updates)
-3. **Deploy** by clicking "Publish" in Lovable UI
+2. **Commit & push** to GitHub
+3. **Vercel auto-deploys** from main branch
+
+Alternative (visual editing):
+1. Open project in Lovable
+2. Make changes visually
+3. Lovable commits to GitHub → Vercel deploys
 
 ---
 
-## Exporting & Hosting
+## Local Development
 
-This project can be deployed to:
-- Vercel (recommended)
-- Netlify
-- GitHub Pages
-- Any static host
+```bash
+npm install
+npm run dev
+```
 
-Build command: `npm run build`  
+Build for production:
+```bash
+npm run build
+```
+
 Output directory: `dist/`
 
 ---
@@ -197,8 +210,8 @@ src/
 │   ├── MicroUpdates.tsx
 │   ├── BlogIndex.tsx
 │   ├── Projects.tsx
+│   ├── YouTubeFeed.tsx
 │   ├── Events.tsx
-│   ├── Contact.tsx
 │   └── Footer.tsx
 ├── data/
 │   └── siteData.ts     # ← EDIT THIS for content
@@ -209,53 +222,6 @@ src/
 ├── index.css           # Design system
 └── App.tsx             # Routes
 ```
-
----
-
-## Customization Tips
-
-### Change Colors
-
-Edit `src/index.css`:
-
-```css
-:root {
-  --background: 0 0% 98.4%;
-  --foreground: 210 65% 8%;
-  --accent: 179 93% 34%; /* Change this */
-}
-```
-
-### Add Drop Cap to Posts
-
-Add `drop-cap` class to first paragraph:
-
-```html
-<p class="drop-cap">First paragraph with fancy drop cap...</p>
-```
-
-### Swap Hero Image
-
-Replace the placeholder div in `src/components/Hero.tsx` with:
-
-```tsx
-<img 
-  src="/path/to/your-image.jpg" 
-  alt="Steve Chranowski"
-  className="w-full h-full object-cover"
-/>
-```
-
----
-
-## Next Steps
-
-- Replace hero image placeholder with your photo
-- Add featured images to blog posts
-- Customize color scheme
-- Connect contact form webhook
-- Add analytics tracking
-- Export to static host
 
 ---
 
@@ -271,8 +237,8 @@ Replace the placeholder div in `src/components/Hero.tsx` with:
 
 ---
 
-## Support
+## Contact
 
-Questions? Feedback? [Open an issue](https://lovable.dev/projects/92dddec5-513f-4b94-bfd0-b76c343ae476) or email steve@example.com.
+Email: stevenchranowski3@gmail.com
 
-Built with [Lovable](https://lovable.dev) ❤️
+Built with [Lovable](https://lovable.dev) + [Claude Code](https://claude.ai/code)

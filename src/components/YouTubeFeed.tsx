@@ -6,6 +6,7 @@ interface YouTubeVideo {
   title: string;
   thumbnail: string;
   videoId: string;
+  addedAt: string; // When video was added to playlist
 }
 
 export const YouTubeFeed = () => {
@@ -20,7 +21,7 @@ export const YouTubeFeed = () => {
     const fetchPlaylistVideos = async () => {
       try {
         const response = await fetch(
-          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=${playlistId}&key=${apiKey}`
+          `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=15&playlistId=${playlistId}&key=${apiKey}`
         );
 
         if (!response.ok) {
@@ -34,7 +35,11 @@ export const YouTubeFeed = () => {
           title: item.snippet.title,
           thumbnail: item.snippet.thumbnails.high.url,
           videoId: item.snippet.resourceId.videoId,
+          addedAt: item.snippet.publishedAt, // When added to playlist
         }));
+
+        // Sort by date added - newest first (appears on left)
+        videoList.sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
 
         setVideos(videoList);
         setLoading(false);
