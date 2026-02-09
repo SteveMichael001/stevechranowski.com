@@ -16,7 +16,7 @@ export const siteConfig = {
   hero_cta2_text: "What I'm doing now",
   hero_cta2_anchor: "#micro-updates",
   
-  about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I resell UPS & FedEx services. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
+  about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I help businesses cut UPS and FedEx shipping costs. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
 
 Currently learning: Claude Code,  Agents
 
