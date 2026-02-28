@@ -18,7 +18,7 @@ export const siteConfig = {
   
   about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I help businesses cut UPS and FedEx shipping costs. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
 
-Currently learning: Claude Code,  Agents
+Currently learning: OpenClaw, Agents
 
 Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
 
