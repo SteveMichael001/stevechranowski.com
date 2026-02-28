@@ -1,4 +1,4 @@
-import loremIpsumFeature from "@/assets/lorem-ipsum-feature.png";
+import loremIpsumFeature from "@/assets/the-life-id-like-to-lead-banner.png";
 import shindigProject from "@/assets/shindig-project.jpg";
 import shindigBanner2 from "@/assets/shindig-banner-2.jpg";
 import shindigBanner3 from "@/assets/shindig-banner-3.jpg";
