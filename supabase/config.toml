@@ -1,4 +1,0 @@
-project_id = "vlorklhejjuudpwahcia"
-
-[functions.fetch-tweets]
-verify_jwt = false
