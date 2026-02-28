@@ -13,18 +13,12 @@ export const siteConfig = {
   hero_subhead: "Short notes, experiments, and an occasional musing by <em>Steve Chranowski</em>",
   hero_cta1_text: "Read latest",
   hero_cta1_anchor: "#writing",
-  hero_cta2_text: "What I'm doing now",
-  hero_cta2_anchor: "#micro-updates",
-  
   about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I help businesses cut UPS and FedEx shipping costs. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
 
 Currently learning: OpenClaw, Agents
 
 Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
 
-  contact_form_webhook_url: "",
-  ga_measurement_id: "",
-  
   social_links: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/stevenchranowski/" },
     { name: "Instagram", url: "https://www.instagram.com/stevemichael.001/" },
@@ -40,75 +34,6 @@ Based in San Diego. Always curious. Skeptical optimist. Extroverted Introvert.`,
 
   now_status: "2025 — Learning to build in public. One experiment at a time."
 };
-
-export interface MicroUpdate {
-  id: string;
-  text: string;
-  date: string;
-  tags?: string[];
-  external_link?: string;
-  published: boolean;
-}
-
-export const microUpdates: MicroUpdate[] = [
-  {
-    id: "mu-8",
-    text: "Just fixed a tricky FedEx billing issue — client saved $1.2k this month. Small wins compound.",
-    date: "2025-10-08T14:30:00Z",
-    tags: ["work", "logistics"],
-    published: true
-  },
-  {
-    id: "mu-7",
-    text: "Discovered a new coffee spot in North Park. Their cortado game is strong ☕",
-    date: "2025-10-06T09:15:00Z",
-    tags: ["san diego", "coffee"],
-    published: true
-  },
-  {
-    id: "mu-6",
-    text: "Finally shipped the VibeCode update — now supports audio waveform visualizations. Check it out →",
-    date: "2025-10-04T18:45:00Z",
-    tags: ["projects", "code"],
-    external_link: "https://vibecode.dev",
-    published: true
-  },
-  {
-    id: "mu-5",
-    text: "Reading 'Thinking in Bets' by Annie Duke. Already changing how I approach decisions under uncertainty.",
-    date: "2025-10-02T11:20:00Z",
-    tags: ["reading", "decision-making"],
-    published: true
-  },
-  {
-    id: "mu-4",
-    text: "Experimented with sous vide duck breast. 135°F for 2 hours, then seared. Game changer. 🍽️",
-    date: "2025-09-30T20:00:00Z",
-    tags: ["cooking"],
-    published: true
-  },
-  {
-    id: "mu-3",
-    text: "Surfed Blacks Beach this morning. Waves were clean. Brain is clear. This is the way.",
-    date: "2025-09-28T07:45:00Z",
-    tags: ["surfing", "san diego"],
-    published: true
-  },
-  {
-    id: "mu-2",
-    text: "Debugging a Rust lifetime error at 11pm is a special kind of torture. But I learned something.",
-    date: "2025-09-26T23:15:00Z",
-    tags: ["code", "learning"],
-    published: true
-  },
-  {
-    id: "mu-1",
-    text: "Launched this site. It's a work in progress — like everything else. Feedback welcome.",
-    date: "2025-09-25T16:00:00Z",
-    tags: ["meta", "projects"],
-    published: true
-  }
-];
 
 export interface BlogPost {
   id: string;
@@ -316,37 +241,4 @@ export const projects: Project[] = [
   }
 ];
 
-export interface Event {
-  id: string;
-  date: string;
-  title: string;
-  location: string;
-  link?: string;
-  past?: boolean;
-}
 
-export const events: Event[] = [
-  {
-    id: "evt-3",
-    date: "2025-11-15T19:00:00Z",
-    title: "SD Tech Meetup — Building in Public",
-    location: "North Park, San Diego",
-    link: "https://sdtech.dev",
-    past: false
-  },
-  {
-    id: "evt-2",
-    date: "2025-10-20T10:00:00Z",
-    title: "Rust Workshop @ UCSD",
-    location: "UC San Diego",
-    past: false
-  },
-  {
-    id: "evt-1",
-    date: "2025-09-10T18:00:00Z",
-    title: "Logistics Innovation Summit",
-    location: "Virtual",
-    link: "https://logisticssummit.co",
-    past: true
-  }
-];
