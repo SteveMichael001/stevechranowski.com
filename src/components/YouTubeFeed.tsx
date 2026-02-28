@@ -30,13 +30,28 @@ export const YouTubeFeed = () => {
 
         const data = await response.json();
 
-        const videoList: YouTubeVideo[] = data.items.map((item: any) => ({
-          id: item.id,
-          title: item.snippet.title,
-          thumbnail: item.snippet.thumbnails.high.url,
-          videoId: item.snippet.resourceId.videoId,
-          addedAt: item.snippet.publishedAt, // When added to playlist
-        }));
+        const videoList: YouTubeVideo[] = data.items
+          .filter((item: any) => {
+            // Filter out private/deleted videos (no thumbnails or no resourceId)
+            const title = item.snippet.title;
+            return (
+              item.snippet.thumbnails &&
+              item.snippet.resourceId?.videoId &&
+              title !== "Private video" &&
+              title !== "Deleted video"
+            );
+          })
+          .map((item: any) => ({
+            id: item.id,
+            title: item.snippet.title,
+            thumbnail:
+              item.snippet.thumbnails?.high?.url ||
+              item.snippet.thumbnails?.medium?.url ||
+              item.snippet.thumbnails?.default?.url ||
+              "",
+            videoId: item.snippet.resourceId.videoId,
+            addedAt: item.snippet.publishedAt, // When added to playlist
+          }));
 
         // Sort by date added - newest first (appears on left)
         videoList.sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
