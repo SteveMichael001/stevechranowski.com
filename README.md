@@ -18,11 +18,9 @@ A calm, minimalist personal website. Built with React, TypeScript, and Tailwind 
 ## Features
 
 - ✅ **Hero section** with confident CTAs
-- ✅ **Micro-updates stream** (reverse-chron, Twitter/tumblelog style)
 - ✅ **Blog system** with featured posts, tags, reading time, clean reading layout
 - ✅ **Projects grid** (portfolio showcase)
 - ✅ **YouTube feed** (pulls latest videos from playlist)
-- ✅ **Events calendar** (upcoming/past)
 - ✅ **Contact links** (email, social)
 - ✅ **SEO metadata** (Open Graph, Twitter cards)
 - ✅ **Mobile-first responsive design**
@@ -205,13 +203,13 @@ Output directory: `dist/`
 ```
 src/
 ├── components/          # React components
+│   ├── Header.tsx
 │   ├── Hero.tsx
 │   ├── About.tsx
-│   ├── MicroUpdates.tsx
 │   ├── BlogIndex.tsx
 │   ├── Projects.tsx
+│   ├── ProjectCarousel.tsx
 │   ├── YouTubeFeed.tsx
-│   ├── Events.tsx
 │   └── Footer.tsx
 ├── data/
 │   └── siteData.ts     # ← EDIT THIS for content
