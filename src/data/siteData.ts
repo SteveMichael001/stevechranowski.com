@@ -230,6 +230,15 @@ export const projects: Project[] = [
     tags: ["SaaS", "logistics", "in progress"]
   },
   {
+    id: "proj-4",
+    title: "NeverMiss",
+    slug: "nevermiss",
+    excerpt: "AI voicemail for contractors. Never lose a lead. When a contractor misses a call, NeverMiss answers, captures the lead, and texts them instantly. Built for plumbers, HVAC techs, electricians — anyone who can't answer while on the job.",
+    link: "https://nevermiss-delta.vercel.app",
+    featured: true,
+    tags: ["AI", "SaaS", "early access"]
+  },
+  {
     id: "proj-2",
     title: "Shindig Productions",
     slug: "shindig",
