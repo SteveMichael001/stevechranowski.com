@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/mission",
+      "destination": "https://mission.stevechranowski.com",
+      "permanent": false
+    }
+  ]
+}
