@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/data/siteData";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const scrollToSection = (anchor: string) => {
-    document.querySelector(anchor)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
@@ -34,33 +29,34 @@ export const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
           <nav className="max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-4">
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection('#about')}
-              className="justify-start text-lg"
-            >
-              About
+            <Button asChild variant="ghost" className="min-h-11 justify-start text-lg">
+              <a href="/#about" onClick={() => setIsMenuOpen(false)}>
+                About
+              </a>
+            </Button>
+            <Button asChild variant="ghost" className="min-h-11 justify-start text-lg">
+              <a href="/#writing" onClick={() => setIsMenuOpen(false)}>
+                Blog
+              </a>
+            </Button>
+            <Button asChild variant="ghost" className="min-h-11 justify-start text-lg">
+              <a href="/#projects" onClick={() => setIsMenuOpen(false)}>
+                Projects
+              </a>
+            </Button>
+            <Button asChild variant="ghost" className="min-h-11 justify-start text-lg">
+              <a href="/#updates" onClick={() => setIsMenuOpen(false)}>
+                Updates
+              </a>
             </Button>
             <Button
+              asChild
               variant="ghost"
-              onClick={() => scrollToSection('#writing')}
-              className="justify-start text-lg"
+              className="justify-start text-lg min-h-11"
             >
-              Blog
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection('#projects')}
-              className="justify-start text-lg"
-            >
-              Projects
-            </Button>
-            <Button
-              variant="ghost"
-              onClick={() => scrollToSection('#updates')}
-              className="justify-start text-lg"
-            >
-              Updates
+              <Link to="/resume" onClick={() => setIsMenuOpen(false)}>
+                Resume
+              </Link>
             </Button>
           </nav>
         </div>
