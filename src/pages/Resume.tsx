@@ -2,6 +2,7 @@ import { Download, ExternalLink } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 type ExperienceRole = {
   title: string;
@@ -109,175 +110,190 @@ const contacts: ContactEntry[] = [
   { label: "github.com/SteveMichael001", href: "https://github.com/SteveMichael001" },
 ];
 
+const summary =
+  "7 years driving new business development across media, crypto, and logistics. $5.5M+ in revenue, always self-sourced, always at or above quota. Aside from sales, I build and operate AI systems for real business workflows: an agent stack running my own sales operations (lead gen, audits, CRM, onboarding) and live products built for other industries. Looking to bring that combination of sales execution and builder mentality to a company in manufacturing, robotics, or AI.";
+
+const sectionLabelClassName =
+  "text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground";
+
 const Resume = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 [--background:222_47%_11%] [--foreground:210_40%_98%] [--card:222_47%_11%] [--card-foreground:210_40%_98%] [--popover:222_47%_11%] [--popover-foreground:210_40%_98%] [--primary:210_40%_98%] [--primary-foreground:222_47%_11%] [--secondary:217_33%_17%] [--secondary-foreground:210_40%_98%] [--muted:217_33%_17%] [--muted-foreground:215_20%_65%] [--accent:179_93%_34%] [--accent-foreground:0_0%_100%] [--border:217_33%_20%] [--input:217_33%_20%] [--ring:179_93%_34%]">
+    <div className="min-h-screen bg-background text-foreground">
       <Header />
 
-      <main className="px-4 pb-16 pt-28 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
-          <section className="rounded-2xl border border-slate-800 bg-slate-900/80 p-6 shadow-2xl shadow-black/20 sm:p-8">
-            <div className="flex flex-col gap-6 border-b border-slate-800 pb-6 sm:flex-row sm:items-start sm:justify-between">
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <p className="text-sm font-medium uppercase tracking-[0.24em] text-teal-400">Resume</p>
-                  <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Steven Chranowski</h1>
+      <main className="px-4 pb-20 pt-28 sm:px-6">
+        <div className="mx-auto w-full max-w-[780px] space-y-8">
+          <Card className="border-border shadow-sm">
+            <CardContent className="space-y-8 p-6 sm:p-8">
+              <div className="flex flex-col gap-6 border-b border-border pb-8">
+                <div className="space-y-3">
+                  <p className={sectionLabelClassName}>Resume</p>
+                  <div className="space-y-2">
+                    <h1 className="font-normal tracking-tight text-4xl sm:text-5xl">
+                      Steven Chranowski
+                    </h1>
+                    <p className="prose-reading max-w-none text-base text-muted-foreground sm:text-lg">
+                      Sales leader and operator building practical AI systems for business workflows.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm leading-6 text-slate-300">
-                  {contacts.map((contact) => (
-                    contact.href ? (
-                      <a
-                        key={contact.label}
-                        href={contact.href}
-                        target={contact.href.startsWith("http") ? "_blank" : undefined}
-                        rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
-                        className="inline-flex min-h-11 items-center rounded-md px-2 py-1 transition-colors hover:text-white"
-                      >
-                        {contact.label}
-                      </a>
-                    ) : (
-                      <span key={contact.label} className="inline-flex min-h-11 items-center rounded-md px-2 py-1">
-                        {contact.label}
-                      </span>
-                    )
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex flex-wrap gap-x-4 gap-y-3 text-sm text-muted-foreground">
+                    {contacts.map((contact) =>
+                      contact.href ? (
+                        <a
+                          key={contact.label}
+                          href={contact.href}
+                          target={contact.href.startsWith("http") ? "_blank" : undefined}
+                          rel={contact.href.startsWith("http") ? "noreferrer" : undefined}
+                          className="inline-flex min-h-11 items-center underline decoration-border underline-offset-4 transition-colors hover:text-foreground"
+                        >
+                          {contact.label}
+                        </a>
+                      ) : (
+                        <span key={contact.label} className="inline-flex min-h-11 items-center">
+                          {contact.label}
+                        </span>
+                      ),
+                    )}
+                  </div>
+
+                  <Button
+                    size="lg"
+                    className="min-h-11 shrink-0"
+                    onClick={() => window.print()}
+                  >
+                    <Download className="h-4 w-4" />
+                    Download PDF
+                  </Button>
+                </div>
+              </div>
+
+              <section className="space-y-4 border-b border-border pb-8">
+                <p className={sectionLabelClassName}>Summary</p>
+                <div className="prose-reading max-w-none">
+                  <p>{summary}</p>
+                </div>
+              </section>
+
+              <section className="space-y-6 border-b border-border pb-8">
+                <p className={sectionLabelClassName}>Experience</p>
+
+                <div className="space-y-8">
+                  {experience.map((entry) => (
+                    <article key={entry.company} className="space-y-4">
+                      <div className="space-y-2">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                          <div>
+                            <h2 className="text-2xl font-normal tracking-tight">
+                              {entry.company}
+                            </h2>
+                            <p className="text-sm text-muted-foreground">{entry.location}</p>
+                          </div>
+
+                          {!entry.roles ? (
+                            <div className="space-y-1 text-sm text-muted-foreground sm:text-right">
+                              <p className="text-base text-foreground">{entry.role}</p>
+                              <p>{entry.period}</p>
+                            </div>
+                          ) : null}
+                        </div>
+                      </div>
+
+                      {entry.roles ? (
+                        <div className="space-y-6">
+                          {entry.roles.map((role) => (
+                            <div key={role.title} className="space-y-3 border-l border-border pl-4">
+                              <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+                                <p className="text-base text-foreground">{role.title}</p>
+                                {role.period ? (
+                                  <p className="text-sm text-muted-foreground">{role.period}</p>
+                                ) : null}
+                              </div>
+                              <ul className="space-y-3 pl-5 text-sm leading-7 text-muted-foreground marker:text-foreground sm:text-base">
+                                {role.bullets.map((bullet) => (
+                                  <li key={bullet} className="list-disc">
+                                    {bullet}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <ul className="space-y-3 pl-5 text-sm leading-7 text-muted-foreground marker:text-foreground sm:text-base">
+                          {entry.bullets.map((bullet) => (
+                            <li key={bullet} className="list-disc">
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </article>
                   ))}
                 </div>
-              </div>
+              </section>
 
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-h-11 border-slate-700 bg-transparent px-5 text-slate-100 hover:border-slate-500 hover:bg-slate-800 hover:text-white"
-              >
-                <a href="/resume.pdf" target="_blank" rel="noreferrer">
-                  <Download className="h-4 w-4" />
-                  Download PDF
-                </a>
-              </Button>
-            </div>
+              <section className="space-y-6 border-b border-border pb-8">
+                <p className={sectionLabelClassName}>Skills</p>
+                <div className="space-y-5">
+                  {skills.map((skill) => (
+                    <div key={skill.title} className="space-y-2">
+                      <h2 className="text-lg font-normal tracking-tight">{skill.title}</h2>
+                      <p className="text-sm leading-7 text-muted-foreground sm:text-base">
+                        {skill.items}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
 
-            <div className="grid gap-8 pt-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(260px,0.9fr)]">
-              <div className="space-y-8">
-                <section className="space-y-3">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Summary</h2>
-                  <p className="max-w-3xl text-base leading-8 text-slate-200">
-                    7 years driving new business development across media, crypto, and logistics. $5.5M+ in revenue, always self-sourced, always at or above quota. Aside from sales, I build and operate AI systems for real business workflows: an agent stack running my own sales operations (lead gen, audits, CRM, onboarding) and live products built for other industries. Looking to bring that combination of sales execution and builder mentality to a company in manufacturing, robotics, or AI.
+              <section className="space-y-6 border-b border-border pb-8">
+                <p className={sectionLabelClassName}>Education</p>
+                <div className="space-y-2">
+                  <h2 className="text-lg font-normal tracking-tight">Rutgers University</h2>
+                  <p className="text-sm text-muted-foreground sm:text-base">New Brunswick, NJ</p>
+                  <p className="text-sm leading-7 text-muted-foreground sm:text-base">
+                    Bachelor of Arts in Economics, Minor in Entrepreneurship · 2019
                   </p>
-                </section>
+                </div>
+              </section>
 
-                <section className="space-y-6">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Experience</h2>
-
-                  <div className="space-y-6">
-                    {experience.map((entry) => (
-                      <article key={entry.company} className="rounded-xl border border-slate-800 bg-slate-950/60 p-5">
-                        <div className="flex flex-col gap-2 border-b border-slate-800 pb-4 sm:flex-row sm:items-start sm:justify-between">
-                          <div>
-                            <h3 className="text-xl font-semibold text-white">{entry.company}</h3>
-                            <p className="text-sm text-slate-400">{entry.location}</p>
-                          </div>
-                          {!entry.roles && (
-                            <div className="text-left sm:text-right">
-                              <p className="text-base font-medium text-slate-200">{entry.role}</p>
-                              <p className="text-sm text-slate-400">{entry.period}</p>
-                            </div>
-                          )}
-                        </div>
-
-                        {entry.roles ? (
-                          <div className="space-y-5 pt-5">
-                            {entry.roles.map((role) => (
-                              <div key={role.title} className="space-y-3">
-                                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                                  <p className="text-base font-medium text-slate-200">{role.title}</p>
-                                  {role.period ? <p className="text-sm text-slate-400">{role.period}</p> : null}
-                                </div>
-                                <ul className="space-y-3 text-sm leading-7 text-slate-300 sm:text-base">
-                                  {role.bullets.map((bullet) => (
-                                    <li key={bullet} className="flex gap-3">
-                                      <span className="mt-2 h-2 w-2 rounded-full bg-teal-400" />
-                                      <span>{bullet}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <ul className="space-y-3 pt-5 text-sm leading-7 text-slate-300 sm:text-base">
-                            {entry.bullets?.map((bullet) => (
-                              <li key={bullet} className="flex gap-3">
-                                <span className="mt-2 h-2 w-2 rounded-full bg-teal-400" />
-                                <span>{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </article>
-                    ))}
-                  </div>
-                </section>
-              </div>
-
-              <aside className="space-y-6">
-                <section className="rounded-xl border border-slate-800 bg-slate-950/60 p-5">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Skills</h2>
-                  <div className="mt-4 space-y-4">
-                    {skills.map((skill) => (
-                      <div key={skill.title} className="space-y-2">
-                        <h3 className="text-base font-medium text-white">{skill.title}</h3>
-                        <p className="text-sm leading-7 text-slate-300">{skill.items}</p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-
-                <section className="rounded-xl border border-slate-800 bg-slate-950/60 p-5">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Education</h2>
-                  <div className="mt-4 space-y-2 text-sm leading-7 text-slate-300">
-                    <p className="text-base font-medium text-white">Rutgers University</p>
-                    <p>New Brunswick, NJ</p>
-                    <p>Bachelor of Arts in Economics, Minor in Entrepreneurship · 2019</p>
-                  </div>
-                </section>
-
-                <section className="rounded-xl border border-slate-800 bg-slate-950/60 p-5">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">Links</h2>
-                  <div className="mt-4 space-y-3">
-                    <a
-                      href="https://www.linkedin.com/in/stevenchranowski/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex min-h-11 items-center justify-between rounded-md border border-slate-800 px-3 text-sm text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
-                    >
-                      LinkedIn
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                    <a
-                      href="https://github.com/SteveMichael001"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex min-h-11 items-center justify-between rounded-md border border-slate-800 px-3 text-sm text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
-                    >
-                      GitHub
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                    <a
-                      href="https://stevechranowski.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex min-h-11 items-center justify-between rounded-md border border-slate-800 px-3 text-sm text-slate-300 transition-colors hover:border-slate-700 hover:text-white"
-                    >
-                      Website
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
-                </section>
-              </aside>
-            </div>
-          </section>
+              <section className="space-y-6">
+                <p className={sectionLabelClassName}>Links</p>
+                <div className="space-y-3">
+                  <a
+                    href="https://www.linkedin.com/in/stevenchranowski/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex min-h-11 items-center justify-between border-b border-border py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-base"
+                  >
+                    LinkedIn
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://github.com/SteveMichael001"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex min-h-11 items-center justify-between border-b border-border py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-base"
+                  >
+                    GitHub
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://stevechranowski.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex min-h-11 items-center justify-between border-b border-border py-2 text-sm text-muted-foreground transition-colors hover:text-foreground sm:text-base"
+                  >
+                    Website
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
+              </section>
+            </CardContent>
+          </Card>
         </div>
       </main>
 
