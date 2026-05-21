@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -48,15 +47,6 @@ export const Header = () => {
               <a href="/#updates" onClick={() => setIsMenuOpen(false)}>
                 Updates
               </a>
-            </Button>
-            <Button
-              asChild
-              variant="ghost"
-              className="justify-start text-lg min-h-11"
-            >
-              <Link to="/resume" onClick={() => setIsMenuOpen(false)}>
-                Resume
-              </Link>
             </Button>
           </nav>
         </div>
