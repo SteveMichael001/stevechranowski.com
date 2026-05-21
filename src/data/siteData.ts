@@ -13,7 +13,7 @@ export const siteConfig = {
   hero_subhead: "Short notes, experiments, and an occasional musing by <em>Steve Chranowski</em>",
   hero_cta1_text: "Read latest",
   hero_cta1_anchor: "#writing",
-  about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I help businesses cut UPS and FedEx shipping costs. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
+  about_text: `I'm Steve - Playing the field, building things, trying to leave my mark. By day, I'm a shipping advisor. By night, I'm riffing with my business partner, staying active, and spending time with the wifey and pup. Designing a life I want to live, instead of going through the motions.
 
 Currently learning: OpenClaw, Agents
 
