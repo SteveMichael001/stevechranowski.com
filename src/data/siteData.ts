@@ -62,11 +62,9 @@ export const blogPosts: BlogPost[] = [
     excerpt: "The idea of potential has been on my mind. My grandfather seared it into my brain. I've always believed I had the greatest potential in my generation of the family—now it's time to execute.",
     featured_image: loremIpsumFeature,
     body_html: `
-      <p class="drop-cap">The life I'd like to lead (the selfish, non-virtuous version)… The purpose of writing this is not to puff my chest, and it's not really for others, but I do want to get comfortable publishing content, so here goes…</p>
-
       <h2>Potential</h2>
 
-      <p>The idea of potential has been on my mind. My grandfather seared it into my brain. He'd say something along the lines of, "You all have very high potential, but it's your call on what you do with it." I thought about it more a couple of years ago when he passed. I could bullshit reasons as to why, but I've always believed I had the greatest potential in my generation of the family. Nothing against the others. I wouldn't be surprised if they feel the same way about me.</p>
+      <p class="drop-cap">The idea of potential has been on my mind. My grandfather seared it into my brain. He'd say something along the lines of, "You all have very high potential, but it's your call on what you do with it." I thought about it more a couple of years ago when he passed. I could bullshit reasons as to why, but I've always believed I had the greatest potential in my generation of the family. Nothing against the others. I wouldn't be surprised if they feel the same way about me.</p>
 
       <p>I still believe this to be true, but I think I've done a pseudo shit job of executing on that potential.</p>
 
