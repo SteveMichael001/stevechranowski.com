@@ -78,10 +78,10 @@ export const YouTubeFeed = () => {
     return (
       <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
         <div className="w-full max-w-[1100px] mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
+          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
             Now Watching
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="mt-4 mb-12 text-muted-foreground">
             Cool content I've been watching on YouTube.
           </p>
           <div className="bg-card p-8 rounded-lg border border-border text-center">
@@ -96,10 +96,10 @@ export const YouTubeFeed = () => {
     return (
       <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
         <div className="w-full max-w-[1100px] mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
+          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
             Now Watching
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="mt-4 mb-12 text-muted-foreground">
             Cool content I've been watching on YouTube.
           </p>
           <div className="bg-card p-6 rounded-lg border border-border text-center">
@@ -123,13 +123,10 @@ export const YouTubeFeed = () => {
   return (
     <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
       <div className="w-full max-w-[1100px] mx-auto">
-        <div className="flex items-center justify-between mb-2">
-          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
-            Now Watching
-          </h2>
-        </div>
-
-        <p className="text-muted-foreground mb-8">
+        <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
+          Now Watching
+        </h2>
+        <p className="mt-4 mb-12 text-muted-foreground">
           Cool content I've been watching on YouTube.
         </p>
 

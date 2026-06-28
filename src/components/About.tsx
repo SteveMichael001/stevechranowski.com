@@ -1,6 +1,7 @@
 import { siteConfig } from "@/data/siteData";
 import { MapPin, Waves, UtensilsCrossed, Code2 } from "lucide-react";
 import portraitImage from "@/assets/portrait.png";
+import { Reveal } from "@/components/Reveal";
 
 const chips = [
   { icon: MapPin, label: "San Diego" },
@@ -12,7 +13,7 @@ const chips = [
 export const About = () => {
   return (
     <section id="about" className="py-24 md:py-32 px-5 md:px-10">
-      <div className="w-full max-w-[1100px] mx-auto grid lg:grid-cols-[1fr_0.72fr] gap-12 lg:gap-20 items-start">
+      <Reveal className="w-full max-w-[1100px] mx-auto grid lg:grid-cols-[1fr_0.72fr] gap-12 lg:gap-20 items-start">
         {/* Left: copy */}
         <div>
           <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] mb-10 text-foreground">
@@ -49,7 +50,7 @@ export const About = () => {
             className="relative w-full rounded-lg grayscale ring-1 ring-foreground/10"
           />
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

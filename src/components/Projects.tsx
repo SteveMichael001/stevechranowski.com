@@ -1,13 +1,12 @@
 import { projects } from "@/data/siteData";
 import { ExternalLink } from "lucide-react";
 import { ProjectCarousel } from "./ProjectCarousel";
-import { useReveal } from "@/hooks/useReveal";
+import { Reveal } from "@/components/Reveal";
 
 export const Projects = () => {
-  const { ref, shown } = useReveal<HTMLDivElement>();
   return (
     <section id="projects" className="py-24 md:py-32 px-5 md:px-10 bg-muted/30">
-      <div ref={ref} className={`w-full max-w-[1100px] mx-auto reveal ${shown ? "is-visible" : ""}`}>
+      <Reveal className="w-full max-w-[1100px] mx-auto">
         <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
           Projects
         </h2>
@@ -66,7 +65,7 @@ export const Projects = () => {
             </article>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

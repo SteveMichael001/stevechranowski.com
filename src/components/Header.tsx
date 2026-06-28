@@ -7,7 +7,7 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <div className="max-w-[1400px] mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-[1100px] mx-auto px-5 md:px-10 py-4 flex items-center justify-between">
         {/* SC Logo */}
         <div className="font-mono text-2xl font-bold tracking-tight">
           SC
@@ -27,7 +27,7 @@ export const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
-          <nav className="max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-4">
+          <nav className="max-w-[1100px] mx-auto px-5 md:px-10 py-6 flex flex-col gap-4">
             <Button asChild variant="ghost" className="min-h-11 justify-start text-lg">
               <a href="/#about" onClick={() => setIsMenuOpen(false)}>
                 About

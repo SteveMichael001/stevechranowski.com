@@ -1,3 +1,4 @@
+import { MotionConfig } from "motion/react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
@@ -9,16 +10,18 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <Marquee />
-      <About />
-      <BlogIndex />
-      <Projects />
-      <YouTubeFeed />
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen">
+        <Header />
+        <Hero />
+        <Marquee />
+        <About />
+        <BlogIndex />
+        <Projects />
+        <YouTubeFeed />
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 };
 

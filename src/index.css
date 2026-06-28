@@ -134,34 +134,25 @@ All colors MUST be HSL.
   }
 }
 
-/* Motivated entrance motion — hero content reveals on load (MOTION_INTENSITY ~4) */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: none; }
-}
-.animate-fade-up   { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.animate-fade-up-2 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both; }
-.animate-fade-up-3 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both; }
+/* Hero entrance + scroll reveals are handled by the Motion library (spring
+   physics) in the components. Only the continuous marquee lives in CSS — a
+   GPU-composited linear loop is the smoothest way to run an infinite band. */
 
-/* Kinetic marquee band (single, deliberate) */
+/* Kinetic marquee band (single, deliberate). Slower + composited so it glides;
+   pauses when the user hovers it. */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
-.marquee-track { animation: marquee 28s linear infinite; }
-
-/* Scroll-reveal for below-the-fold sections */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+.marquee-track {
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
-.reveal.is-visible { opacity: 1; transform: none; }
+@media (hover: hover) {
+  .marquee-band:hover .marquee-track { animation-play-state: paused; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up,
-  .animate-fade-up-2,
-  .animate-fade-up-3,
   .marquee-track { animation: none; }
-  .reveal { opacity: 1; transform: none; transition: none; }
 }

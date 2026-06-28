@@ -2,7 +2,7 @@ import { blogPosts } from "@/data/siteData";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import { Clock } from "lucide-react";
-import { useReveal } from "@/hooks/useReveal";
+import { Reveal } from "@/components/Reveal";
 
 export const BlogIndex = () => {
   const publishedPosts = blogPosts
@@ -11,11 +11,10 @@ export const BlogIndex = () => {
 
   const featuredPost = publishedPosts.find((p) => p.featured);
   const recentPosts = publishedPosts.filter((p) => !p.featured).slice(0, 5);
-  const { ref, shown } = useReveal<HTMLDivElement>();
 
   return (
     <section id="writing" className="py-24 md:py-32 px-5 md:px-10">
-      <div ref={ref} className={`w-full max-w-[1100px] mx-auto reveal ${shown ? "is-visible" : ""}`}>
+      <Reveal className="w-full max-w-[1100px] mx-auto">
         <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
           Writing
         </h2>
@@ -95,7 +94,7 @@ export const BlogIndex = () => {
             </Link>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
