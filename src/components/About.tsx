@@ -40,7 +40,7 @@ export const About = () => {
         {/* Right: portrait with a solid accent offset block (bold, locked accent) */}
         <div className="relative mx-auto lg:mx-0 w-full max-w-[340px]">
           <div
-            className="absolute inset-0 translate-x-4 translate-y-4 -z-10 rounded-lg bg-accent"
+            className="absolute inset-0 translate-x-4 translate-y-4 -z-10 rounded-lg bg-[hsl(36_36%_72%)]"
             aria-hidden
           />
           <img
