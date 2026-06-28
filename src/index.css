@@ -143,8 +143,16 @@ All colors MUST be HSL.
 .animate-fade-up-2 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both; }
 .animate-fade-up-3 { animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both; }
 
+/* Kinetic marquee band (single, deliberate) */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 28s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
   .animate-fade-up-2,
-  .animate-fade-up-3 { animation: none; }
+  .animate-fade-up-3,
+  .marquee-track { animation: none; }
 }

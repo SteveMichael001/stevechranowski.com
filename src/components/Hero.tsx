@@ -1,43 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteData";
-import portraitImage from "@/assets/portrait.png";
+import { ArrowDown } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[100dvh] flex items-center px-4 pt-24 pb-16 overflow-hidden">
-      <div className="w-full max-w-[1100px] mx-auto grid md:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
-        {/* Left: Text */}
-        <div className="space-y-7">
-          <h1 className="animate-fade-up text-5xl md:text-6xl lg:text-[5.25rem] font-medium tracking-[-0.035em] leading-[0.95] text-foreground">
-            {siteConfig.hero_headline}
-          </h1>
+    <section className="relative min-h-[100dvh] flex flex-col justify-center px-5 md:px-10 pt-24 pb-20 overflow-hidden">
+      <div className="w-full max-w-[1320px] mx-auto">
+        <p className="animate-fade-up font-mono text-[11px] md:text-xs uppercase tracking-[0.28em] text-accent mb-7">
+          Builder · Operator · San Diego
+        </p>
+
+        <h1 className="animate-fade-up-2 font-black tracking-[-0.04em] leading-[0.9] text-foreground text-[clamp(3rem,12vw,10.5rem)] pb-2">
+          Doing things.
+          <br />
+          <span className="italic font-semibold">Shamelessly</span> sharing&nbsp;them.
+        </h1>
+
+        <div className="animate-fade-up-3 mt-10 md:mt-12 flex flex-col sm:flex-row sm:items-center gap-6">
           <p
-            className="animate-fade-up-2 max-w-[48ch] text-lg md:text-xl text-muted-foreground leading-relaxed"
+            className="max-w-[40ch] text-lg md:text-xl text-muted-foreground leading-relaxed"
             dangerouslySetInnerHTML={{ __html: siteConfig.hero_subhead }}
           />
-          <div className="animate-fade-up-3 flex flex-col sm:flex-row gap-4 pt-2">
-            <Button
-              size="lg"
-              onClick={() => document.querySelector(siteConfig.hero_cta1_anchor)?.scrollIntoView({ behavior: "smooth" })}
-              className="text-base transition-transform hover:-translate-y-[1px] active:translate-y-[1px]"
-            >
-              {siteConfig.hero_cta1_text}
-            </Button>
-          </div>
+          <Button
+            size="lg"
+            onClick={() => document.querySelector(siteConfig.hero_cta1_anchor)?.scrollIntoView({ behavior: "smooth" })}
+            className="group h-12 px-7 text-base transition-transform hover:-translate-y-0.5 active:translate-y-0"
+          >
+            {siteConfig.hero_cta1_text}
+            <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" strokeWidth={2} />
+          </Button>
         </div>
+      </div>
 
-        {/* Right: Portrait, with a tinted offset frame (depth tied to brand accent) */}
-        <div className="animate-fade-up-2 relative flex items-center justify-center md:justify-end">
-          <div
-            className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-lg bg-accent/10"
-            aria-hidden
-          />
-          <img
-            src={portraitImage}
-            alt="Steve Chranowski"
-            className="relative max-w-full max-h-[62vh] w-auto h-auto rounded-lg ring-1 ring-border"
-          />
-        </div>
+      <div
+        className="animate-fade-up-3 absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/40"
+        aria-hidden
+      >
+        <ArrowDown className="h-5 w-5 animate-bounce" strokeWidth={1.5} />
       </div>
     </section>
   );
