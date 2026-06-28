@@ -76,9 +76,9 @@ export const YouTubeFeed = () => {
 
   if (loading) {
     return (
-      <section id="youtube-feed" className="py-24 px-4">
+      <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
         <div className="w-full max-w-[1100px] mx-auto">
-          <h2 className="text-3xl md:text-4xl font-normal text-foreground mb-2">
+          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
             Now Watching
           </h2>
           <p className="text-muted-foreground mb-8">
@@ -94,9 +94,9 @@ export const YouTubeFeed = () => {
 
   if (error || videos.length === 0) {
     return (
-      <section id="youtube-feed" className="py-24 px-4">
+      <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
         <div className="w-full max-w-[1100px] mx-auto">
-          <h2 className="text-3xl md:text-4xl font-normal text-foreground mb-2">
+          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
             Now Watching
           </h2>
           <p className="text-muted-foreground mb-8">
@@ -121,10 +121,10 @@ export const YouTubeFeed = () => {
   }
 
   return (
-    <section id="youtube-feed" className="py-24 px-4">
+    <section id="youtube-feed" className="py-24 md:py-32 px-5 md:px-10">
       <div className="w-full max-w-[1100px] mx-auto">
         <div className="flex items-center justify-between mb-2">
-          <h2 className="text-3xl md:text-4xl font-normal text-foreground">
+          <h2 className="text-4xl md:text-6xl font-black tracking-[-0.03em] leading-[0.95] text-foreground">
             Now Watching
           </h2>
         </div>
@@ -142,7 +142,7 @@ export const YouTubeFeed = () => {
                 href={`https://www.youtube.com/watch?v=${video.videoId}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-card rounded-lg border border-border overflow-hidden hover:border-muted-foreground/50 transition-all duration-300 flex-shrink-0 w-[320px] md:w-[340px]"
+                className="group relative bg-card rounded-lg border border-border overflow-hidden hover:border-muted-foreground/50 duration-300 flex-shrink-0 w-[320px] md:w-[340px] hover:border-accent/50"
               >
                 {/* Thumbnail */}
                 <div className="relative aspect-video overflow-hidden">
@@ -167,7 +167,7 @@ export const YouTubeFeed = () => {
 
                 {/* Video Info */}
                 <div className="p-4">
-                  <h3 className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-muted-foreground transition-colors">
+                  <h3 className="text-sm font-semibold text-foreground line-clamp-2 group-hover:text-accent transition-colors">
                     {video.title}
                   </h3>
                   <div className="mt-2 flex items-center gap-1 text-xs text-muted-foreground">
